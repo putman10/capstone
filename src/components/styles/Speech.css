@@ -1,0 +1,26 @@
+.voiceButtonOn {
+    padding: 10px;
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+    background: white;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    border-left: 0;
+}
+.voiceButtonOff {
+    padding: 10px;
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+    background: white;
+    color: red;
+    font-weight: 700;
+    font-size: 18px;
+    border-left: 0;
+}
+.voiceButtons {
+  display: inline-block;
+  vertical-align: top;
+}
