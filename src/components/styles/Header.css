@@ -1,0 +1,65 @@
+#bike {
+  transform: translateX(-200px);
+  transition: transform 400ms ease-in;
+  width: 200px;
+}
+
+#bike.slideIn {
+  transform: translateX(0);
+}
+
+#bike.slideOut {
+  transform: translateX(200%);
+}
+
+.containerStyle1{
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center
+}
+
+.containerStyle2{
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  background: #ffffffb0;
+  padding: 10px;
+  border: 6px solid black;
+  font-size: 25px;
+  -Webkit-Box-Shadow: 0px 10px 20px rgba(0,0,0,0.19);
+  -Moz-Box-Shadow: 0px 10px 20px rgba(0,0,0,0.19);
+  Box-Shadow: 0px 10px 20px rgba(0,0,0,0.19);
+}
+
+.headerStyle{
+  background-color: #651fff;
+  padding: 10px 0;
+  color: white;
+  font-size: 35px;
+  text-transform: capitalize;
+  -Webkit-Box-Shadow: 0px 10px 20px rgba(0,0,0,0.19);
+  -Moz-Box-Shadow: 0px 10px 20px rgba(0,0,0,0.19);
+  Box-Shadow: 0px 10px 20px rgba(0,0,0,0.19);
+}
+
+.lowerFont{
+  font-size: 15px;
+}
+
+.bikeStyle{
+  max-width: 100%;
+}
+
+.bikeDiv{
+  width: 200px;
+  margin: 0 auto;
+}
+
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}

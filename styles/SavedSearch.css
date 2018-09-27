@@ -1,0 +1,17 @@
+.searchButtons {
+    background-color: #6520ff;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.searchButtons:first-of-type {
+    margin-left: 0;
+}
+
+.savedTitle{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
