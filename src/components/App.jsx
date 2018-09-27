@@ -1,35 +1,22 @@
 import React from 'react';
-import Header from './Header';
-import BikeListDisplay from './BikeList';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import './styles/App.css';
+import Header from './Header';
+import Footer from './Footer';
+import Home from './Home';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMicrophone } from '@fortawesome/free-solid-svg-icons'
 
-function App({searchResults}){
-  if(searchResults){
-    return (
-      <div>
-        <Header />
-        <BikeListDisplay />
-      </div>
-    );
-  } else {
-    return (
-      <div>
-        <Header />
-      </div>
-    );
-  }
+function App(){
+  library.add(faMicrophone);
+
+  return (
+    <div>
+      <Header />
+      <Home />
+      <Footer />
+    </div>
+  );
 }
 
-App.propTypes = {
-  searchResults: PropTypes.object
-};
-
-const mapStateToProps = state => {
-  return {
-    searchResults: state.search[1]
-  };
-};
-
-export default connect(mapStateToProps)(App);
+export default App;

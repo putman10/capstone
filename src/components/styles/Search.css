@@ -1,0 +1,46 @@
+#searchInputDiv {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.searchButton {
+    border-radius: 0 5px 5px 0;
+    background: black;
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.voiceButton {
+    padding: 10px;
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+    background: white;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    border-left: 0;
+}
+
+
+.searchInput {
+    border-radius: 5px 0 0 5px;
+    border: 1px solid black;
+    padding: 10px;
+    min-width: 200px;
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: top;
+    border-right: 0;
+}
+
+.microphone {
+  max-width: 100%;
+  width:30px;
+}
