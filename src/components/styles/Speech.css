@@ -1,21 +1,30 @@
-.voiceButtonOn {
-    padding: 10px;
-    border: 1px solid black;
-    display: inline-block;
-    vertical-align: top;
-    background: white;
-    color: black;
-    font-weight: 700;
-    font-size: 18px;
-    border-left: 0;
-}
 .voiceButtonOff {
     padding: 10px;
     border: 1px solid black;
     display: inline-block;
     vertical-align: top;
-    background: white;
-    color: red;
+    background: #d4d4d4;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    border-left: 0;
+    transition: color .5s ease-in-out, background .5s ease-in-out;
+    -moz-transition: color .5s ease-in-out, background .5s ease-in-out;
+    -webkit-transition: color .5s ease-in-out, background .5s ease-in-out;
+}
+
+.voiceButtonOff:hover {
+    background: #ff3d00;
+    color:white;
+}
+
+.voiceButtonOn {
+    padding: 10px;
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+    background: #ff3d00;
+    color: white;
     font-weight: 700;
     font-size: 18px;
     border-left: 0;

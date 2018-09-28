@@ -12,7 +12,7 @@ console.log(props.voiceSearch)
   if(Object.keys(props.voiceSearch).length > 0){
     inputSearch=<input className="searchInput" value={props.voiceSearch.search} ref={node => {input = node;}}></input>;
   } else {
-    inputSearch=<input className="searchInput" placeholder="Search for..." ref={node => {input = node;}}></input>;
+    inputSearch=<input className="searchInput" placeholder="Type or speak..." ref={node => {input = node;}}></input>;
   }
 
   return (

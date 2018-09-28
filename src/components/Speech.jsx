@@ -33,17 +33,11 @@ class Dictaphone extends React.Component {
       return null;
     }
 
-    let onButton = <div className="voiceButtonOn">
-      <FontAwesomeIcon onClick={this.handleReset} icon="microphone" alt="microphone. Click and start speaking"/>
-    </div>;
-
-    let offButton = <div className="voiceButtonOff">
-      <FontAwesomeIcon onClick={this.handleStop} icon="microphone" alt="microphone. Click and start speaking"/>
-    </div>;
-
     return (
       <div className="voiceButtons">
-        {this.props.listening ? offButton : onButton}
+        <div className={this.props.listening ? "voiceButtonOn" : "voiceButtonOff"} onClick={this.props.listening ? this.handleStop : this.handleReset }>
+          <FontAwesomeIcon icon="microphone" alt="microphone. Click and start speaking"/>
+        </div>
       </div>
     );
   }
