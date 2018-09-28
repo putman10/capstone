@@ -25,17 +25,17 @@ p {
   color:#FFB405;
 }
 
-.dark {
+.header-dark {
   background-color: #651fff;
   color: white;
 }
 
-.light {
-  background-color: red;
+.header-light {
+  background-color: black;
   color: white;
 }
 
-.color {
+.header-color {
   background-color: green;
   color: white;
 }

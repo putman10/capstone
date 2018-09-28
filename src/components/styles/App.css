@@ -8,7 +8,7 @@ body.background-dark{
 }
 
 body.background-light{
-  background: blue;
+  background: url('./../../assets/greyzz.png');
 }
 
 body.background-color{
