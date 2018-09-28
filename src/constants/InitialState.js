@@ -1,3 +1,4 @@
 export const initialState = {
-  search: {}
+  search: {},
+  menu: true
 };
