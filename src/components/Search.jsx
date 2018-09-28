@@ -10,13 +10,13 @@ function Search(props){
   let inputSearch;
 
 function handleResetInput(){
-  props.voiceSearch == {};
+  props.voiceSearch == "";
   console.log(props.voiceSearch);
+  // console.log(Object.keys(props.voiceSearch).length);
 }
 
   if(Object.keys(props.voiceSearch).length > 0){
-    console.log(props.voiceSearch);
-    inputSearch=<input className="searchInput" onClick={handleResetInput} value={props.voiceSearch.search == "" ? "Try speaking again..." : props.voiceSearch.search} ref={node => {input = node;}}></input>;
+    inputSearch=<input className="searchInput" onClick={handleResetInput} value={props.voiceSearch == "" ? "Try speaking again..." : props.voiceSearch.search} ref={node => {input = node;}}></input>;
   } else {
     console.log(props.voiceSearch);
     inputSearch=<input className="searchInput" placeholder="Type or speak..." ref={node => {input = node;}}></input>;

@@ -1,7 +1,7 @@
 import constants from './../constants';
 const { initialState, types } = constants;
 
-const voiceSearchReducer = (state = initialState, action) => {
+const voiceSearchReducer = (state = initialState.search, action) => {
   let newSearchText;
   let newSearchStateSlice;
 
