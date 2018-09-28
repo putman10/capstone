@@ -4,10 +4,10 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from './Home';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMicrophone } from '@fortawesome/free-solid-svg-icons';
+import { faMicrophone, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 function App(){
-  library.add(faMicrophone);
+  library.add(faMicrophone, faTimesCircle);
 
   return (
     <div>

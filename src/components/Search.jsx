@@ -11,7 +11,6 @@ function Search(props){
 
 function handleResetInput(){
   props.voiceSearch == {};
-  console.log(props.voiceSearch);
 }
 
   if(Object.keys(props.voiceSearch).length > 0){

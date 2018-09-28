@@ -13,3 +13,27 @@ p {
   width:90%;
   margin: 0 auto;
 }
+
+.closeButton,
+.menuItems {
+  display:inline-block;
+  vertical-align: top;
+}
+.closeButton{
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    vertical-align: middle;
+    color:white;
+    transition: color .5s ease-in-out;
+    -moz-transition: color .5s ease-in-out;
+    -webkit-transition: color .5s ease-in-out;
+}
+
+.closeButton:hover{
+  color:gold;
+}
+
+.menuItems {
+  font-size: 20px;
+}

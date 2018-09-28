@@ -12,7 +12,6 @@ class Dictaphone extends React.Component {
     super(props);
     this.handleReset = this.handleReset.bind(this);
     this.handleStop = this.handleStop.bind(this);
-    console.log(this.props);
   }
 
   handleReset(){
