@@ -2,6 +2,7 @@
   background-color: black;
   color: white;
   padding: 10px 0;
+  text-align: center;
 }
 
 p {
@@ -25,13 +26,14 @@ p {
     right: 10px;
     vertical-align: middle;
     color:white;
-    transition: color .5s ease-in-out;
-    -moz-transition: color .5s ease-in-out;
-    -webkit-transition: color .5s ease-in-out;
+    transition: color .5s ease-in-out, transform .5s ease-in-out;
+    -moz-transition: color .5s ease-in-out, transform .5s ease-in-out;
+    -webkit-transition: color .5s ease-in-out, transform .5s ease-in-out;
 }
 
 .closeButton:hover{
-  color:gold;
+  color:#FFB405;
+  transform: rotate(80deg);
 }
 
 .menuItems {

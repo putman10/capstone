@@ -3,23 +3,33 @@ import './styles/Menu.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ReactTooltip from 'react-tooltip';
+import { closeMenu } from './../actions';
 
-function Menu(props){
+class Menu extends React.Component {
+  constructor(props) {
+    super(props);
+    let menu = props.menu;
+    this.handleCloseNavMenu = this.handleCloseNavMenu.bind(this);
+  }
 
-function handleResetInput(){
-
+handleCloseNavMenu(){
+this.props.dispatch(closeMenu(false));
 }
 
-  let menuExpanded=<div id="menu"><div className="container"><div className="closeButton"><FontAwesomeIcon icon="times-circle" alt="Close Menu. Click to Close"/></div><div className="menuItems"><p>Menu Items</p></div></div></div>;
+render(){
+
+
+  let menuExpanded=<div id="menu"><div className="container"><div className="closeButton"><FontAwesomeIcon icon="times-circle" alt="Close Menu. Click to Close" data-tip="Close Navigation Menu" onClick={this.handleCloseNavMenu}/></div><ReactTooltip /><div className="menuItems"><p>Menu Items</p></div></div></div>;
 
   let menuCollapsed;
 
-
   return (
     <div >
-      {props.menu ? menuExpanded : menuCollapsed}
+      {this.props.menu ? menuExpanded : menuCollapsed}
     </div>
   );
+}
 }
 
 Menu.propTypes = {
