@@ -65,6 +65,8 @@ p {
     font-weight: 700;
     text-transform: uppercase;
     font-size: 16px;
+    float: right;
+    margin-right: 15px;
 }
 
 .example-appear {
@@ -73,7 +75,7 @@ p {
 
 .example-appear.example-appear-active {
   opacity: 1;
-  transition: opacity 1s ease-in;
+  transition: opacity 1000ms ease-in-out;
 }
 
 .example-enter {
@@ -82,7 +84,7 @@ p {
 
 .example-enter.example-enter-active {
   opacity: 1;
-  transition: opacity 500ms ease-in;
+  transition: opacity 1000ms ease-in-out;
 }
 
 .example-leave {
@@ -91,5 +93,5 @@ p {
 
 .example-leave.example-leave-active {
   opacity: 0.01;
-  transition: opacity 300ms ease-in;
+  transition: opacity 1000ms ease-in-out;
 }

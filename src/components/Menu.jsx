@@ -15,10 +15,7 @@ class Menu extends React.Component {
   }
 
 handleCloseNavMenu(toggle){
-this.props.dispatch(closeMenu("null"));
-console.log(toggle)
-setTimeout(() => this.props.dispatch(closeMenu(toggle)), 1000);
-console.log(toggle)
+this.props.dispatch(closeMenu(toggle));
 }
 
 render(){
@@ -54,11 +51,9 @@ render(){
 
   let menuCollapsed =
   <div key="2">
-    <div className="container">
       <div className="closedTab" onClick={() => this.handleCloseNavMenu(true)}>
         <p>Open Menu</p>
       </div>
-    </div>
   </div>;
 
   return (
