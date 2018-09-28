@@ -7,6 +7,13 @@ import Speech from './Speech';
 
 function Search(props){
   let input;
+  let inputSearch;
+console.log(props.voiceSearch)
+  if(Object.keys(props.voiceSearch).length > 0){
+    inputSearch=<input className="searchInput" value={props.voiceSearch.search} ref={node => {input = node;}}></input>;
+  } else {
+    inputSearch=<input className="searchInput" placeholder="Search for..." ref={node => {input = node;}}></input>;
+  }
 
   return (
     <div id="searchInputDiv">
@@ -19,7 +26,7 @@ function Search(props){
         input.value = '';
       }}>
 
-        <input className="searchInput" placeholder="Search for..." ref={node => {input = node;}}></input>
+        {inputSearch}
         <Speech />
         <button className="searchButton">Search</button>
       </form>
@@ -28,7 +35,14 @@ function Search(props){
 }
 
 Search.propTypes = {
-  dispatch: PropTypes.func
+  dispatch: PropTypes.func,
+  voiceSearch: PropTypes.object
 };
 
-export default connect()(Search);
+const mapStateToProps = state => {
+  return {
+    voiceSearch: state.voiceSearch
+  };
+};
+
+export default connect(mapStateToProps)(Search);

@@ -3,45 +3,49 @@ import SpeechRecognition from 'react-speech-recognition';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './styles/Speech.css';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { updateVoiceSearch } from './../actions';
 
 class Dictaphone extends React.Component {
   constructor(props) {
     super(props);
-    let listening = false
+    this.handleReset = this.handleReset.bind(this);
+    this.handleStop = this.handleStop.bind(this);
+  }
+
+  handleReset(){
+    this.props.resetTranscript();
+    this.props.startListening();
+    this.props.listening == true;
+  }
+
+  handleStop(){
+    this.props.stopListening();
+    this.props.listening == false;
+    this.props.dispatch(updateVoiceSearch(this.props.transcript));
   }
 
   render() {
     const { transcript, startListening, stopListening, resetTranscript, browserSupportsSpeechRecognition } = this.props;
 
-    function reset(props){
-      resetTranscript();
-      startListening();
-      props.listening = true;
-    }
-
-    function stop(props){
-      stopListening();
-      props.listening = false;
-    }
 
     if (!browserSupportsSpeechRecognition) {
       return null;
     }
 
     let onButton = <div className="voiceButtonOn">
-      <FontAwesomeIcon onClick={reset} icon="microphone" alt="microphone. Click and start speaking"/>
+      <FontAwesomeIcon onClick={this.handleReset} icon="microphone" alt="microphone. Click and start speaking"/>
     </div>;
 
     let offButton = <div className="voiceButtonOff">
-      <FontAwesomeIcon onClick={stop} icon="microphone" alt="microphone. Click and start speaking"/>
+      <FontAwesomeIcon onClick={this.handleStop} icon="microphone" alt="microphone. Click and start speaking"/>
     </div>;
 
     return (
       <div className="voiceButtons">
         {this.props.listening ? offButton : onButton}
-        <span>{transcript}</span>
       </div>
-    )
+    );
   }
 }
 
@@ -50,7 +54,14 @@ Dictaphone.propTypes = {
   startListening: PropTypes.func,
   stopListening: PropTypes.func,
   resetTranscript: PropTypes.func,
-  browserSupportsSpeechRecognition: PropTypes.bool
+  browserSupportsSpeechRecognition: PropTypes.bool,
+  listening: PropTypes.bool,
+  voiceSearch: PropTypes.object,
+  dispatch: PropTypes.func
 };
 
-export default SpeechRecognition({autoStart: false})(Dictaphone)
+const options = {
+  autoStart: false
+};
+
+export default SpeechRecognition(options)(connect()(Dictaphone));

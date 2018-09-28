@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import latLongReducer from './latLongReducer';
+import voiceSearchReducer from './voiceSearchReducer';
 
 const rootReducer = combineReducers({
-  theaters: latLongReducer
+  voiceSearch: voiceSearchReducer
 });
 
 export default rootReducer;
