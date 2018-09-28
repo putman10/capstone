@@ -5,6 +5,7 @@ import './styles/Speech.css';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { updateVoiceSearch } from './../actions';
+import ReactTooltip from 'react-tooltip';
 
 class Dictaphone extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class Dictaphone extends React.Component {
     this.props.resetTranscript();
     this.props.startListening();
     this.props.listening == true;
+    this.props.dispatch(updateVoiceSearch("Recording..."));
   }
 
   handleStop(){
@@ -36,7 +38,8 @@ class Dictaphone extends React.Component {
 
     return (
       <div className="voiceButtons">
-        <div className={this.props.listening ? "voiceButtonOn" : "voiceButtonOff"} onMouseEnter={this.handleReset} onMouseLeave={this.handleStop} >
+        <div data-tip="Hold mouse down and speak voice2text" className={this.props.listening ? "voiceButtonOn" : "voiceButtonOff"} onMouseDown={this.handleReset} onMouseUp={this.handleStop} >
+          <ReactTooltip />
           <FontAwesomeIcon icon="microphone" alt="microphone. Click and start speaking"/>
         </div>
       </div>

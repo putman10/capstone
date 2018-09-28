@@ -8,10 +8,17 @@ import Speech from './Speech';
 function Search(props){
   let input;
   let inputSearch;
-console.log(props.voiceSearch)
+
+function handleResetInput(){
+  props.voiceSearch == {};
+  console.log(props.voiceSearch);
+}
+
   if(Object.keys(props.voiceSearch).length > 0){
-    inputSearch=<input className="searchInput" value={props.voiceSearch.search} ref={node => {input = node;}}></input>;
+    console.log(props.voiceSearch);
+    inputSearch=<input className="searchInput" onClick={handleResetInput} value={props.voiceSearch.search == "" ? "Try speaking again..." : props.voiceSearch.search} ref={node => {input = node;}}></input>;
   } else {
+    console.log(props.voiceSearch);
     inputSearch=<input className="searchInput" placeholder="Type or speak..." ref={node => {input = node;}}></input>;
   }
 
