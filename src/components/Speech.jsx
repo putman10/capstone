@@ -1,29 +1,31 @@
-import React, {Component } from 'react';
+import React from 'react';
 import SpeechRecognition from 'react-speech-recognition';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './styles/Speech.css';
+import PropTypes from 'prop-types';
 
-class Dictaphone extends Component {
-  listening = false;
+class Dictaphone extends React.Component {
+  constructor(props) {
+    super(props);
+    let listening = false
+  }
+
   render() {
     const { transcript, startListening, stopListening, resetTranscript, browserSupportsSpeechRecognition } = this.props;
-    console.log(listening)
 
-    function reset(){
-      startListening();
+    function reset(props){
       resetTranscript();
-      this.listening = true;
-      console.log(listening)
+      startListening();
+      props.listening = true;
     }
 
-    function stop(){
+    function stop(props){
       stopListening();
-      this.listening = false;
-      console.log(listening)
+      props.listening = false;
     }
 
     if (!browserSupportsSpeechRecognition) {
-      return null
+      return null;
     }
 
     let onButton = <div className="voiceButtonOn">
@@ -36,11 +38,19 @@ class Dictaphone extends Component {
 
     return (
       <div className="voiceButtons">
-        {listening ? offButton : onButton}
+        {this.props.listening ? offButton : onButton}
         <span>{transcript}</span>
       </div>
     )
   }
 }
+
+Dictaphone.propTypes = {
+  transcript: PropTypes.string,
+  startListening: PropTypes.func,
+  stopListening: PropTypes.func,
+  resetTranscript: PropTypes.func,
+  browserSupportsSpeechRecognition: PropTypes.bool
+};
 
 export default SpeechRecognition({autoStart: false})(Dictaphone)
