@@ -21,7 +21,7 @@ class Menu extends React.Component {
 
 
     let menuExpanded=
-      <div id="menu" key="1">
+      <div id="menu" className={'menu-' + this.props.theme} key="1">
         <div className="container">
           <div className="closeButton">
             <FontAwesomeIcon icon="times-circle" alt="Close Menu. Click to Close" data-tip="Close Navigation Menu" onClick={() => this.handleCloseNavMenu(false)}/>
@@ -70,13 +70,15 @@ class Menu extends React.Component {
 
 Menu.propTypes = {
   dispatch: PropTypes.func,
-  menu: PropTypes.bool
+  menu: PropTypes.bool,
+  theme: PropTypes.string
 };
 
 const mapStateToProps = state => {
 
   return {
-    menu: state.menu
+    menu: state.menu,
+    theme: state.theme
   };
 };
 

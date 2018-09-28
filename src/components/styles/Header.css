@@ -1,12 +1,5 @@
 #header {
-  background-color: #651fff;
-  color: white;
-  padding: 15px 0;
-}
 
-#headerRed {
-  background-color: red;
-  color: white;
   padding: 15px 0;
 }
 
@@ -30,4 +23,19 @@ p {
 
 .gold{
   color:#FFB405;
+}
+
+.dark {
+  background-color: #651fff;
+  color: white;
+}
+
+.light {
+  background-color: red;
+  color: white;
+}
+
+.color {
+  background-color: green;
+  color: white;
 }

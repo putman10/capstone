@@ -5,9 +5,22 @@
 }
 
 #footer {
-    background-color: black;
-    color:white;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-dark {
+  background-color: black;
+  color:white;
+}
+
+.footer-light {
+  background-color: red;
+  color:white;
+}
+
+.footer-color {
+  background-color: blue;
+  color:white;
 }

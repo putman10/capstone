@@ -1,10 +1,8 @@
 #menu {
-  background-color: black;
-  color: white;
   padding: 10px 0;
   text-align: center;
-    position: absolute;
-    width: 100%;
+  position: absolute;
+  width: 100%;
 }
 
 p {
@@ -80,15 +78,6 @@ p {
     background:black;
 }
 
-.example-appear {
-  opacity: 0.01;
-}
-
-.example-appear.example-appear-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in-out;
-}
-
 .example-enter {
   opacity: 0.01;
 }
@@ -105,4 +94,19 @@ p {
 .example-leave.example-leave-active {
   opacity: 0.01;
   transition: opacity 500ms ease-in-out;
+}
+
+.menu-dark {
+  background-color: black;
+  color: white;
+}
+
+.menu-light {
+  background-color: red;
+  color: white;
+}
+
+.menu-color {
+  background-color: yellow;
+  color: white;
 }

@@ -1,5 +1,16 @@
 body {
-  background: url('./../../assets/footer_lodyas.png');
   font-family: 'Poppins', sans-serif;
   margin: 0px;
+}
+
+body.background-dark{
+  background: url('./../../assets/footer_lodyas.png');
+}
+
+body.background-light{
+  background: blue;
+}
+
+body.background-color{
+  background: red;
 }

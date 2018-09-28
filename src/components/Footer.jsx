@@ -1,10 +1,12 @@
 import React from 'react';
 import './styles/Footer.css';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-function Footer(){
+function Footer(props){
 
   return (
-    <div id="footer">
+    <div id="footer" className={'footer-' + props.theme}>
       <div className="container">
         <p>Test</p>
       </div>
@@ -12,4 +14,14 @@ function Footer(){
   );
 }
 
-export default Footer;
+Footer.propTypes = {
+  theme: PropTypes.string
+};
+
+const mapStateToProps = state => {
+  return {
+    theme: state.theme
+  };
+};
+
+export default connect(mapStateToProps)(Footer);

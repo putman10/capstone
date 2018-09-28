@@ -12,6 +12,8 @@ class ThemeSwitcher extends React.Component {
 
   handleThemeSwitch(theme){
     this.props.dispatch(chooseTheme(theme));
+    document.body.classList = "";
+    document.body.classList.toggle('background-' + theme);
   }
 
   render(){
