@@ -3,6 +3,7 @@ import './styles/ThemeSwitcher.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { chooseTheme } from './../actions';
+import ReactTooltip from 'react-tooltip';
 
 class ThemeSwitcher extends React.Component {
   constructor(props) {
@@ -20,14 +21,15 @@ class ThemeSwitcher extends React.Component {
 
     return (
       <div >
-        <div onClick={() => this.handleThemeSwitch("light")}>
-          <p>Light Theme</p>
+        <h4>Theme Selector:</h4>
+        <div onClick={() => this.handleThemeSwitch("light")} className="themes">
+          <div data-tip="Light Theme" className="light-theme"><ReactTooltip /></div>
         </div>
-        <div onClick={() => this.handleThemeSwitch("dark")}>
-          <p>Dark Theme (default)</p>
+        <div onClick={() => this.handleThemeSwitch("dark")} className="themes">
+          <div data-tip="Dark Theme" className="dark-theme"><ReactTooltip /></div>
         </div>
-        <div onClick={() => this.handleThemeSwitch("color")}>
-          <p>Color Blind</p>
+        <div onClick={() => this.handleThemeSwitch("color")} className="themes">
+          <div data-tip="Color-blind" className="color-theme"><ReactTooltip /></div>
         </div>
       </div>
     );

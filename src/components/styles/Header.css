@@ -36,6 +36,6 @@ p {
 }
 
 .header-color {
-  background-color: green;
+  background: url('./../../assets/wild_oliva.png');
   color: white;
 }
