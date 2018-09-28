@@ -36,6 +36,10 @@ p {
   transform: rotate(80deg);
 }
 
+#menu .container {
+  text-align: left;
+}
+
 .menuItem {
     font-size: 16px;
     text-transform: uppercase;

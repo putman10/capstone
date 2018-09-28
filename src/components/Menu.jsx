@@ -27,6 +27,7 @@ class Menu extends React.Component {
           <div className="closeButton">
             <FontAwesomeIcon icon="times-circle" alt="Close Menu. Click to Close" data-tip="Close Navigation Menu" onClick={() => this.handleCloseNavMenu(false)}/>
           </div>
+          <ThemeSwitcher />
           <div className="menuItem">
             <p>Home</p>
           </div>
@@ -45,7 +46,6 @@ class Menu extends React.Component {
           <div className="menuItem">
             <p>Contact</p>
           </div>
-          <ThemeSwitcher />
         </div>
       </div>;
 
