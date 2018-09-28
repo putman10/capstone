@@ -9,7 +9,7 @@ function Header(){
     <div>
       <div id="header">
         <div className="container">
-          <div id="logo"></div>
+          <div id="logo">ACCESS<span className="gold">:</span>4<span className="gold">:</span>ALL</div>
           <Search />
         </div>
       </div>

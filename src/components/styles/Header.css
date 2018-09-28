@@ -15,6 +15,13 @@ p {
 }
 
 #logo {
-  display:inline-block;
-  vertical-align: top;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    font-weight: 700;
+    font-size: 37px;
+}
+
+.gold{
+  color:#FFB405;
 }
