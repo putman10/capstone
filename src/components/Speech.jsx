@@ -11,6 +11,7 @@ class Dictaphone extends React.Component {
     super(props);
     this.handleReset = this.handleReset.bind(this);
     this.handleStop = this.handleStop.bind(this);
+    console.log(this.props);
   }
 
   handleReset(){
@@ -35,7 +36,7 @@ class Dictaphone extends React.Component {
 
     return (
       <div className="voiceButtons">
-        <div className={this.props.listening ? "voiceButtonOn" : "voiceButtonOff"} onClick={this.props.listening ? this.handleStop : this.handleReset }>
+        <div className={this.props.listening ? "voiceButtonOn" : "voiceButtonOff"} onMouseEnter={this.handleReset} onMouseLeave={this.handleStop} >
           <FontAwesomeIcon icon="microphone" alt="microphone. Click and start speaking"/>
         </div>
       </div>
