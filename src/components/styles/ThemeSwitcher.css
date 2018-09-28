@@ -1,7 +1,8 @@
 .light-theme {
   width: 25px;
   height: 25px;
-  border: 6px solid black;
+  border: 3px solid black;
+  border-radius: 3px;
   background: #ffffff;
   background: -moz-linear-gradient(-45deg, #ffffff 0%, #651fff 100%);
   background: -webkit-linear-gradient(-45deg, #ffffff 0%,#651fff 100%);
@@ -12,7 +13,8 @@
 .dark-theme {
   width: 25px;
   height: 25px;
-  border: 6px solid black;
+  border: 3px solid black;
+  border-radius: 3px;
   background: #000000;
   background: -moz-linear-gradient(-45deg, #000000 0%, #651fff 100%);
   background: -webkit-linear-gradient(-45deg, #000000 0%,#651fff 100%);
@@ -23,7 +25,8 @@
 .color-theme {
   width: 25px;
   height: 25px;
-  border: 6px solid black;
+  border: 3px solid black;
+  border-radius: 3px;
   background: #383838;
   background: -moz-linear-gradient(-45deg, #383838 0%, #d1d1d1 100%);
   background: -webkit-linear-gradient(-45deg, #383838 0%,#d1d1d1 100%);
@@ -34,10 +37,27 @@
 .themes {
   display:inline-block;
   vertical-align: top;
-  margin-right: 10px;
+  margin-right: 5px;
+}
+
+.themeSwitcher {
+    vertical-align: top;
+    margin-right: 0;
+    background: #ffffff;
+    color: black;
+    padding: 3px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
 }
 
 .themes:last-of-type {
+    margin-right: 0;
+}
+
+.themeSwitcher h4{
   display:inline-block;
-  margin-right: 0;
+  vertical-align: top;
+  margin: 0 5px 0 0;
 }

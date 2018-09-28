@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { closeMenu } from './../actions';
 import { CSSTransitionGroup } from 'react-transition-group';
 import ReactTooltip from 'react-tooltip';
+import ThemeSwitcher from './ThemeSwitcher';
 
 class Menu extends React.Component {
   constructor(props) {
@@ -44,6 +45,7 @@ class Menu extends React.Component {
           <div className="menuItem">
             <p>Contact</p>
           </div>
+          <ThemeSwitcher />
         </div>
       </div>;
 

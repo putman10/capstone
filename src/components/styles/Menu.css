@@ -21,7 +21,7 @@ p {
   vertical-align: top;
 }
 .closeButton{
-    font-size: 25px;
+    font-size: 35px;
     position: absolute;
     right: 15px;
     vertical-align: middle;
@@ -40,7 +40,7 @@ p {
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 700;
-    padding: 7px 0 3px;
+    padding: 9px 0 3px;
     border-bottom: 2px solid transparent;
     margin-right: 40px;
     transition: border-bottom .4s ease-in-out, color .4s ease-in-out;
@@ -67,6 +67,9 @@ p {
     font-size: 18px;
     float: right;
     margin-right: 15px;
+    -webkit-box-shadow: 0px 2px 15px 1px rgba(0,0,0,0.44);
+    -moz-box-shadow: 0px 2px 15px 1px rgba(0,0,0,0.44);
+    box-shadow: 0px 2px 15px 1px rgba(0,0,0,0.44);
     transition: padding .4s ease-in-out, color .4s ease-in-out, background .4s ease-in-out;
     -moz-transition: padding .4s ease-in-out, color .4s ease-in-out, background .4s ease-in-out;
     -webkit-transition: padding .4s ease-in-out, color .4s ease-in-out, background .4s ease-in-out;
