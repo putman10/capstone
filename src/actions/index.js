@@ -18,6 +18,12 @@ export function closeMenu(status){
   };
 }
 
+export function chooseTheme(theme){
+  return function(dispatch){
+    dispatch(themeToggle(theme));
+  };
+}
+
 export const voiceSearch = (translation) => ({
   type: types.SAVE_VOICESEARCH,
   translation
@@ -32,4 +38,9 @@ export const requestLatLong = (zip, localSearchId) => ({
 export const menuToggle = (status) => ({
   type: types.CLOSE_MENU,
   status
+});
+
+export const themeToggle = (theme) => ({
+  type: types.CHOOSE_THEME,
+  theme
 });

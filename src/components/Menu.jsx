@@ -50,7 +50,7 @@ class Menu extends React.Component {
     let menuCollapsed =
       <div key="2">
         <div className="closedTab" onClick={() => this.handleCloseNavMenu(true)}>
-          <p>Open Menu</p>
+          <p>Menu</p>
         </div>
       </div>;
 

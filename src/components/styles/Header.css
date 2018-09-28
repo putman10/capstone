@@ -4,6 +4,12 @@
   padding: 15px 0;
 }
 
+#headerRed {
+  background-color: red;
+  color: white;
+  padding: 15px 0;
+}
+
 p {
   margin:0px;
 }

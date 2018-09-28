@@ -12,7 +12,6 @@ const menuReducer = (state = initialState.menu, action) => {
   case types.CLOSE_MENU:
     newMenuState = action.status;
     return newMenuState;
-
   }
 };
 

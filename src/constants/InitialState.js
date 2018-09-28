@@ -1,4 +1,5 @@
 export const initialState = {
   search: {},
-  menu: true
+  menu: true,
+  theme: 'dark'
 };
