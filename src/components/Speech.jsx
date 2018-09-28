@@ -18,7 +18,7 @@ class Dictaphone extends React.Component {
     this.props.resetTranscript();
     this.props.startListening();
     this.props.listening == true;
-    this.props.dispatch(updateVoiceSearch("Recording..."));
+    this.props.dispatch(updateVoiceSearch('Recording...'));
   }
 
   handleStop(){
@@ -28,7 +28,7 @@ class Dictaphone extends React.Component {
   }
 
   render() {
-    const { transcript, startListening, stopListening, resetTranscript, browserSupportsSpeechRecognition } = this.props;
+    const { browserSupportsSpeechRecognition } = this.props;
 
 
     if (!browserSupportsSpeechRecognition) {
@@ -37,7 +37,7 @@ class Dictaphone extends React.Component {
 
     return (
       <div className="voiceButtons">
-        <div data-tip="Hold mouse down and speak voice2text" className={this.props.listening ? "voiceButtonOn" : "voiceButtonOff"} onMouseDown={this.handleReset} onMouseUp={this.handleStop} >
+        <div data-tip="Hold mouse down and speak voice2text" className={this.props.listening ? 'voiceButtonOn' : 'voiceButtonOff'} onMouseDown={this.handleReset} onMouseUp={this.handleStop} >
           <ReactTooltip />
           <FontAwesomeIcon icon="microphone" alt="microphone. Click and start speaking"/>
         </div>

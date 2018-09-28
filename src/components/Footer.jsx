@@ -4,8 +4,10 @@ import './styles/Footer.css';
 function Footer(){
 
   return (
-    <div>
-      <p>Test</p>
+    <div id="footer">
+      <div className="container">
+        <p>Test</p>
+      </div>
     </div>
   );
 }
