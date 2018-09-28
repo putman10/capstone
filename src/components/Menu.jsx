@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { closeMenu } from './../actions';
 import { CSSTransitionGroup } from 'react-transition-group';
+import ReactTooltip from 'react-tooltip';
 
 class Menu extends React.Component {
   constructor(props) {
@@ -57,9 +58,10 @@ class Menu extends React.Component {
       <div >
         <CSSTransitionGroup
           transitionName="example"
-          transitionEnterTimeout={1000}
-          transitionLeaveTimeout={1000}>
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={500}>
           {this.props.menu ? menuExpanded : menuCollapsed}
+          <ReactTooltip />
         </CSSTransitionGroup>
       </div>
     );

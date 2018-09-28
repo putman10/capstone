@@ -23,9 +23,9 @@ p {
   vertical-align: top;
 }
 .closeButton{
-    font-size: 20px;
+    font-size: 25px;
     position: absolute;
-    right: 10px;
+    right: 15px;
     vertical-align: middle;
     color:white;
     transition: color .5s ease-in-out, transform .5s ease-in-out;
@@ -66,9 +66,18 @@ p {
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 18px;
     float: right;
     margin-right: 15px;
+    transition: padding .4s ease-in-out, color .4s ease-in-out, background .4s ease-in-out;
+    -moz-transition: padding .4s ease-in-out, color .4s ease-in-out, background .4s ease-in-out;
+    -webkit-transition: padding .4s ease-in-out, color .4s ease-in-out, background .4s ease-in-out;
+}
+
+.closedTab:hover{
+    padding: 20px 10px 10px 10px;
+    color:white;
+    background:black;
 }
 
 .example-appear {
@@ -77,7 +86,7 @@ p {
 
 .example-appear.example-appear-active {
   opacity: 1;
-  transition: opacity 1000ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 .example-enter {
@@ -86,7 +95,7 @@ p {
 
 .example-enter.example-enter-active {
   opacity: 1;
-  transition: opacity 1000ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 .example-leave {
@@ -95,5 +104,5 @@ p {
 
 .example-leave.example-leave-active {
   opacity: 0.01;
-  transition: opacity 1000ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
