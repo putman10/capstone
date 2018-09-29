@@ -24,24 +24,25 @@ class Menu extends React.Component {
     let menuExpanded=
       <div id="menu" className={'menu-' + this.props.theme} key="1">
         <div className="container">
-          <div className="closeButton">
-            <FontAwesomeIcon icon="times-circle" alt="Close Menu. Click to Close" data-tip="Close Navigation Menu" onClick={() => this.handleCloseNavMenu(false)}/>
+          <div className="closeButton" data-tip="Close Navigation Menu">
+            <FontAwesomeIcon icon="times-circle" alt="Close Menu. Click to Close" onClick={() => this.handleCloseNavMenu(false)}/>
           </div>
+          <ReactTooltip place="left" type="dark" effect="solid"/>
           <ThemeSwitcher />
           <div className="menuItem">
             <p>Home</p>
           </div>
           <div className="menuItem">
-            <p>Businesses</p>
+            <p><FontAwesomeIcon icon="shopping-cart" alt="Business Icon"/> Businesses</p>
           </div>
           <div className="menuItem">
-            <p>Jobs</p>
+            <p><FontAwesomeIcon icon="film" alt="Movie Icon"/> Theaters</p>
           </div>
           <div className="menuItem">
-            <p>Doctors</p>
+            <p><FontAwesomeIcon icon="user-md" alt="Doctor Icon"/> Doctors</p>
           </div>
           <div className="menuItem">
-            <p>For Developers</p>
+            <p><FontAwesomeIcon icon="code" alt="Developer Icon"/> For Developers</p>
           </div>
           <div className="menuItem">
             <p>Contact</p>
@@ -63,7 +64,6 @@ class Menu extends React.Component {
           transitionEnterTimeout={500}
           transitionLeaveTimeout={500}>
           {this.props.menu ? menuExpanded : menuCollapsed}
-          <ReactTooltip />
         </CSSTransitionGroup>
       </div>
     );

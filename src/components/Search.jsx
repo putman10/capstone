@@ -6,7 +6,7 @@ import { logInput } from './../actions';
 import Speech from './Speech';
 
 function Search(props){
-  let input;
+  let input = '';
   let inputSearch;
 
   function handleResetInput(){
@@ -16,7 +16,7 @@ function Search(props){
   if(Object.keys(props.voiceSearch).length > 0){
     inputSearch=<input className="searchInput" onClick={handleResetInput} value={props.voiceSearch.search == '' ? 'Try speaking again...' : props.voiceSearch.search} ref={node => {input = node;}}></input>;
   } else {
-    inputSearch=<input className="searchInput" placeholder="Type or speak..." ref={node => {input = node;}}></input>;
+    inputSearch=<input className="searchInput" placeholder="Type or hold microphone button to speak..." ref={node => {input = node;}}></input>;
   }
 
   return (
