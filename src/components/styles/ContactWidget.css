@@ -1,10 +1,52 @@
-.contactWidget {
-    background-color: white;
-    padding: 6rem 10px;
-    border: 1px solid #FFB405;
-    text-align: center;
-    font-size: 149px;
+.contactWidget h2{
+  margin-top: 0;
+}
+
+.contactWidget input,
+.contactWidget textarea {
+    width: 85%;
+    display: block;
+    border: 1px solid transparent;
+    border-bottom: 1px solid white;
+    border-radius: 4px;
+    padding: 10px;
+    background: #252525;
+    color: white;
+    font-size: 18px;
+    margin-top: 7px;
+}
+
+.form-group {
+  margin-top: 10px;
+}
+
+.contactWidget button {
+    background: #FFB405;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-top: 20px;
+    color: black;
+    padding: 10px;
     font-weight: 700;
-    z-index: -4;
-    position: relative;
+    text-transform: uppercase;
+    font-size: 18px;
+    transition: background .5s ease-in-out, color .5s ease-in-out, border .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, color .5s ease-in-out, border .5s ease-in-out;
+    -webkit-transition: background .5s ease-in-out, color .5s ease-in-out, border .5s ease-in-out;
+}
+.contactWidget button:hover {
+    background: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.leftForm,
+.rightForm {
+  width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.contactWidget p {
+  margin-bottom:10px;
 }

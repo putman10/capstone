@@ -15,18 +15,6 @@ p {
   margin: 0 auto;
 }
 
-#logo {
-    display: inline-block;
-    vertical-align: top;
-    width: 50%;
-    font-weight: 700;
-    font-size: 37px;
-}
-
-.gold{
-  color:#FFB405;
-}
-
 .header-dark {
   background-color: #651fff;
   color: white;

@@ -14,25 +14,25 @@ class FooterLinks extends React.Component {
   render(){
 
     return (
-        <div id="footerLinks" className={'footerLinks-' + this.props.theme} key="1">
-            <div className="footerLinksItem">
-              <p><Link to="/">Home</Link></p>
-            </div>
-            <div className="footerLinksItem">
-              <p><Link to="/admin"><FontAwesomeIcon icon="shopping-cart" alt="Business Icon"/> Businesses</Link></p>
-            </div>
-            <div className="footerLinksItem">
-              <p><FontAwesomeIcon icon="film" alt="Movie Icon"/> Theaters</p>
-            </div>
-            <div className="footerLinksItem">
-              <p><FontAwesomeIcon icon="user-md" alt="Doctor Icon"/> Doctors</p>
-            </div>
-            <div className="footerLinksItem">
-              <p><FontAwesomeIcon icon="code" alt="Developer Icon"/> For Developers</p>
-            </div>
-            <div className="footerLinksItem">
-              <p>Contact</p>
-            </div>
+      <div id="footerLinks" className={'footerLinks-' + this.props.theme} key="1">
+        <div className="footerLinksItem">
+          <p><Link to="/">Home</Link></p>
+        </div>
+        <div className="footerLinksItem">
+          <p><Link to="/admin"><FontAwesomeIcon icon="shopping-cart" alt="Business Icon"/> Businesses</Link></p>
+        </div>
+        <div className="footerLinksItem">
+          <p><FontAwesomeIcon icon="film" alt="Movie Icon"/> Theaters</p>
+        </div>
+        <div className="footerLinksItem">
+          <p><FontAwesomeIcon icon="user-md" alt="Doctor Icon"/> Doctors</p>
+        </div>
+        <div className="footerLinksItem">
+          <p><FontAwesomeIcon icon="code" alt="Developer Icon"/> For Developers</p>
+        </div>
+        <div className="footerLinksItem">
+          <p>Contact</p>
+        </div>
       </div>
     );
   }
