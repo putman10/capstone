@@ -23,8 +23,10 @@ function Header(props){
 
 Header.propTypes = {
   dispatch: PropTypes.func,
-  theme: PropTypes.string
+  theme: PropTypes.string,
+  
 };
+
 
 const mapStateToProps = state => {
   return {

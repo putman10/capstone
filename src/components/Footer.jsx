@@ -8,7 +8,7 @@ function Footer(props){
   return (
     <div id="footer" className={'footer-' + props.theme}>
       <div className="container">
-        <p>Test</p>
+        <p>Footer</p>
       </div>
     </div>
   );

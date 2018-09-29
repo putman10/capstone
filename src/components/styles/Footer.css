@@ -5,9 +5,10 @@
 }
 
 #footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
+    padding: 6rem 10px;
+    text-align: center;
+    font-size: 149px;
+    font-weight: 700;
 }
 
 .footer-dark {

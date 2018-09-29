@@ -1,7 +1,9 @@
 import React from 'react';
 import './styles/Home.css';
+import PropTypes from 'prop-types';
 
-function Home(){
+function Home(props){
+  console.log(props);
 
   return (
     <div className="home container">
@@ -9,5 +11,9 @@ function Home(){
     </div>
   );
 }
+
+Home.propTypes = {
+  currentRouterPath: PropTypes.string.isRequired
+};
 
 export default Home;

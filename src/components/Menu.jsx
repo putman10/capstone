@@ -5,8 +5,9 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { closeMenu } from './../actions';
 import { CSSTransitionGroup } from 'react-transition-group';
-import ReactTooltip from 'react-tooltip';
 import ThemeSwitcher from './ThemeSwitcher';
+import { Link } from 'react-router-dom';
+
 
 class Menu extends React.Component {
   constructor(props) {
@@ -27,13 +28,12 @@ class Menu extends React.Component {
           <div className="closeButton" data-tip="Close Navigation Menu">
             <FontAwesomeIcon icon="times-circle" alt="Close Menu. Click to Close" onClick={() => this.handleCloseNavMenu(false)}/>
           </div>
-          <ReactTooltip place="left" type="dark" effect="solid"/>
           <ThemeSwitcher />
           <div className="menuItem">
-            <p>Home</p>
+            <p><Link to="/">Home</Link></p>
           </div>
           <div className="menuItem">
-            <p><FontAwesomeIcon icon="shopping-cart" alt="Business Icon"/> Businesses</p>
+            <p><Link to="/admin"><FontAwesomeIcon icon="shopping-cart" alt="Business Icon"/> Businesses</Link></p>
           </div>
           <div className="menuItem">
             <p><FontAwesomeIcon icon="film" alt="Movie Icon"/> Theaters</p>
@@ -51,7 +51,7 @@ class Menu extends React.Component {
       </div>;
 
     let menuCollapsed =
-      <div key="2">
+      <div className="container" key="2">
         <div className="closedTab" onClick={() => this.handleCloseNavMenu(true)}>
           <p>Menu</p>
         </div>
