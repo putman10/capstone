@@ -30,7 +30,7 @@ function App(){
 }
 
 App.propTypes = {
-  location: PropTypes.string.isRequired
+  location: PropTypes.object.isRequired
 };
 
 

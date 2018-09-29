@@ -61,3 +61,7 @@
   vertical-align: top;
   margin: 0 6px 0 3px;
 }
+
+#footer .themeSwitcher {
+  margin-right: 0;
+}

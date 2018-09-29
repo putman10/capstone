@@ -9,12 +9,6 @@ p {
   margin:0px;
 }
 
-.container {
-  max-width: 1200px;
-  width:90%;
-  margin: 0 auto;
-}
-
 .closeButton,
 .menuItem {
   display:inline-block;
@@ -54,6 +48,13 @@ p {
 .menuItem a{
     color: white;
     text-decoration: none;
+    transition: color .4s ease-in-out;
+    -moz-transition: color .4s ease-in-out;
+    -webkit-transition: color .4s ease-in-out;
+}
+
+.menuItem:hover a{
+color: #FFB405;
 }
 
 .menuItem:last-of-type {

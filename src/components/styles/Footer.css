@@ -1,14 +1,5 @@
-.container {
-  max-width: 1200px;
-  width:90%;
-  margin: 0 auto;
-}
-
 #footer {
-    padding: 6rem 10px;
-    text-align: center;
-    font-size: 149px;
-    font-weight: 700;
+    padding: 3rem 0;
 }
 
 .footer-dark {
@@ -24,4 +15,17 @@
 .footer-color {
   background-color: black;
   color:white;
+}
+
+.col {
+  display:inline-block;
+  vertical-align: top;
+}
+
+.col-7 {
+  width:70%;
+}
+
+.col-3 {
+  width:30%;
 }

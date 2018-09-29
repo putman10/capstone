@@ -1,6 +1,9 @@
 import React from 'react';
 import './styles/Footer.css';
 import { connect } from 'react-redux';
+import ContactWidget from './ContactWidget';
+import ThemeSwitcher from './ThemeSwitcher';
+import FooterLinks from './FooterLinks';
 import PropTypes from 'prop-types';
 
 function Footer(props){
@@ -8,7 +11,13 @@ function Footer(props){
   return (
     <div id="footer" className={'footer-' + props.theme}>
       <div className="container">
-        <p>Footer</p>
+        <div className="col col-7">
+          <ContactWidget />
+        </div>
+        <div className="col col-3">
+          <ThemeSwitcher />
+          <FooterLinks />
+        </div>
       </div>
     </div>
   );

@@ -4,8 +4,8 @@ import './styles/Admin.css';
 function Admin(){
 
   return (
-    <div>
-      <p>Test</p>
+    <div className="admin container">
+      <p>Admin</p>
     </div>
   );
 }
