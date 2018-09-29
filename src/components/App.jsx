@@ -9,6 +9,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMicrophone, faTimesCircle, faFilm, faUserMd, faShoppingCart, faCode } from '@fortawesome/free-solid-svg-icons';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import 'babel-polyfill';
+import PropTypes from 'prop-types';
+
 
 function App(){
   library.add(faMicrophone, faTimesCircle, faFilm, faUserMd, faShoppingCart, faCode);
@@ -16,15 +19,19 @@ function App(){
   return (
     <div>
       <Header />
-        <Switch>
-            <Route exact path='/' render={(props)=><Home currentRouterPath={props.location.pathname}/>} />
-            <Route path='/search' render={()=><SearchForm />} />
-            <Route path='/admin' render={()=><Admin />} />
-            <Route component={Error404} />
-          </Switch>
+      <Switch>
+        <Route exact path='/' render={(props)=><Home currentRouterPath={props.location.pathname}/>} />
+        <Route path='/admin' render={()=><Admin />} />
+        <Route component={Error404} />
+      </Switch>
       <Footer />
     </div>
   );
 }
+
+App.propTypes = {
+  location: PropTypes.string.isRequired
+};
+
 
 export default withRouter(connect()(App));

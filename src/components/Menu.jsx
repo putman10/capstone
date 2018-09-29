@@ -7,6 +7,7 @@ import { closeMenu } from './../actions';
 import { CSSTransitionGroup } from 'react-transition-group';
 import ThemeSwitcher from './ThemeSwitcher';
 import { Link } from 'react-router-dom';
+import ReactTooltip from 'react-tooltip';
 
 
 class Menu extends React.Component {
@@ -17,6 +18,7 @@ class Menu extends React.Component {
 
   handleCloseNavMenu(toggle){
     this.props.dispatch(closeMenu(toggle));
+    ReactTooltip.hide();
   }
 
   render(){
@@ -28,6 +30,7 @@ class Menu extends React.Component {
           <div className="closeButton" data-tip="Close Navigation Menu">
             <FontAwesomeIcon icon="times-circle" alt="Close Menu. Click to Close" onClick={() => this.handleCloseNavMenu(false)}/>
           </div>
+          <ReactTooltip />
           <ThemeSwitcher />
           <div className="menuItem">
             <p><Link to="/">Home</Link></p>

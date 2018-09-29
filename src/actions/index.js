@@ -1,8 +1,8 @@
 import * as types from './../constants/ActionTypes';
 
-export function logInput(input) {
+export function logInput() {
   return function(){
-    console.log(input);
+
   };
 }
 

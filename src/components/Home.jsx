@@ -3,7 +3,6 @@ import './styles/Home.css';
 import PropTypes from 'prop-types';
 
 function Home(props){
-  console.log(props);
 
   return (
     <div className="home container">
