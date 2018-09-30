@@ -7,30 +7,19 @@ import Speech from './Speech';
 
 function Search(props){
   let input = '';
-  let inputSearch;
 
-  function handleResetInput(){
-    props.voiceSearch == {};
+ function handleChange(event) {
+    props.dispatch(logInput(event.target.value));
   }
 
-  if(Object.keys(props.voiceSearch).length > 0){
-    inputSearch=<input className="searchInput" onClick={handleResetInput} value={props.voiceSearch.search == '' ? 'Try speaking again...' : props.voiceSearch.search} ref={node => {input = node;}}></input>;
-  } else {
-    inputSearch=<input className="searchInput" placeholder="Type or hold microphone button to speak..." ref={node => {input = node;}}></input>;
+  function submitSearch(event){
+    event.preventDefault();
   }
 
   return (
     <div id="searchInputDiv">
-      <form onSubmit={e => {
-        e.preventDefault();
-        if (!input.value) {
-          return;
-        }
-        props.dispatch(logInput(input.value));
-        input.value = '';
-      }}>
-
-        {inputSearch}
+      <form onSubmit={submitSearch}>
+        <input className="searchInput" value={props.voiceSearch.search} onChange={handleChange} ref={node => {input = node;}}></input>
         <Speech />
         <button className="searchButton">Search</button>
       </form>

@@ -1,14 +1,20 @@
 import * as types from './../constants/ActionTypes';
 
-export function logInput() {
-  return function(){
-
+export function logInput(input) {
+  return function(dispatch){
+    dispatch(voiceSearch(input));
   };
 }
 
 export function updateVoiceSearch(translation){
   return function(dispatch){
     dispatch(voiceSearch(translation));
+  };
+}
+
+export function updateNameComment(translation){
+  return function(dispatch){
+    dispatch(nameComment(translation));
   };
 }
 
@@ -26,6 +32,11 @@ export function chooseTheme(theme){
 
 export const voiceSearch = (translation) => ({
   type: types.SAVE_VOICESEARCH,
+  translation
+});
+
+export const nameComment = (translation) => ({
+  type: types.SAVE_NAME,
   translation
 });
 

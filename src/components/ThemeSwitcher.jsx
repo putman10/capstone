@@ -21,7 +21,7 @@ class ThemeSwitcher extends React.Component {
 
     return (
       <div className="themeSwitcher">
-        <h4>SELECT A THEME</h4>
+        <h4>CHOOSE A THEME</h4>
         <div onClick={() => this.handleThemeSwitch('light')} className="themes">
           <div data-tip="Light Theme" className="light-theme"><ReactTooltip /></div>
         </div>

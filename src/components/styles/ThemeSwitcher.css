@@ -1,7 +1,7 @@
 .light-theme {
   width: 25px;
   height: 25px;
-  border: 3px solid black;
+  border: 2px solid black;
   border-radius: 3px;
   background: #ffffff;
   background: -moz-linear-gradient(-45deg, #ffffff 0%, #651fff 100%);
@@ -13,7 +13,7 @@
 .dark-theme {
   width: 25px;
   height: 25px;
-  border: 3px solid black;
+  border: 2px solid black;
   border-radius: 3px;
   background: #000000;
   background: -moz-linear-gradient(-45deg, #000000 0%, #651fff 100%);
@@ -25,7 +25,7 @@
 .color-theme {
   width: 25px;
   height: 25px;
-  border: 3px solid black;
+  border: 2px solid black;
   border-radius: 3px;
   background: #383838;
   background: -moz-linear-gradient(-45deg, #383838 0%, #d1d1d1 100%);

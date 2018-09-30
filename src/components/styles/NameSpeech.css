@@ -1,0 +1,38 @@
+.nameButtonOff {
+    padding: 10px;
+    border: 1px solid white;
+    display: inline-block;
+    vertical-align: top;
+    background: #d4d4d4;
+    color: black;
+    border-radius: 0px 4px 4px 0;
+    font-weight: 700;
+    font-size: 18px;
+    border-left: 0;
+    border-right: 0;
+    transition: color .5s ease-in-out, background .5s ease-in-out;
+    -moz-transition: color .5s ease-in-out, background .5s ease-in-out;
+    -webkit-transition: color .5s ease-in-out, background .5s ease-in-out;
+}
+
+.nameButtonOff:active {
+    background: #ff3d00;
+    color:white;
+}
+
+.nameButtonOn {
+    padding: 10px;
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+    background: #ff3d00;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    border-left: 0;
+        border-right: 0;
+}
+.nameButtons {
+    display: inline-block;
+    vertical-align: top;
+}

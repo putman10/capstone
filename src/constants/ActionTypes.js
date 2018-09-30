@@ -1,4 +1,5 @@
 export const REQUEST_LATLONG = 'REQUEST_LATLONG';
 export const SAVE_VOICESEARCH = 'SAVE_VOICESEARCH';
+export const SAVE_NAME = 'SAVE_NAME';
 export const CLOSE_MENU = 'CLOSE_MENU';
 export const CHOOSE_THEME = 'CHOOSE_THEME';

@@ -5,19 +5,19 @@
 .contactWidget input,
 .contactWidget textarea {
     width: 85%;
-    display: block;
-    border: 1px solid transparent;
-    border-bottom: 1px solid white;
-    border-radius: 4px;
+    display: inline-block;
+    border: 1px solid white;
+    border-right: 0px;
+    border-radius: 4px 0px 0px 4px;
     padding: 10px;
     background: #252525;
     color: white;
     font-size: 18px;
-    margin-top: 7px;
 }
 
 .form-group {
   margin-top: 10px;
+  position:relative;
 }
 
 .contactWidget button {
@@ -40,6 +40,10 @@
     border: 1px solid white;
 }
 
+.contactWidget label {
+    font-weight: 700;
+}
+
 .leftForm,
 .rightForm {
   width: 50%;
@@ -49,4 +53,9 @@
 
 .contactWidget p {
   margin-bottom:10px;
+  max-width: 97%;
+}
+
+.nameGroup {
+  margin-top: 7px;
 }
