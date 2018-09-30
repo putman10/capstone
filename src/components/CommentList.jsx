@@ -8,10 +8,9 @@ function CommentList(props){
 
   return (
     <div className="commentList container">
-      <hr/>
       {Object.keys(props.comments).map(function(commentId) {
         var comment = props.comments[commentId];
-        return <p key={props.commentId}>{comment.name}</p>;
+        return <div key={props.commentId}><p>{comment.name}</p><p>{comment.email}</p><p>{comment.feedback}</p><p>{comment.timeSent}</p><hr /></div>;
       })}
     </div>
   );
