@@ -4,7 +4,7 @@
 
 .contactWidget input,
 .contactWidget textarea {
-    width: 85%;
+    width: 84%;
     display: inline-block;
     border: 1px solid white;
     border-right: 0px;
@@ -46,9 +46,10 @@
 
 .leftForm,
 .rightForm {
-  width: 50%;
-    display: inline-block;
-    vertical-align: top;
+  width: 47%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 3%;
 }
 
 .contactWidget p {

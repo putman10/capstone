@@ -3,5 +3,7 @@ export const initialState = {
   comment: {},
   menu: true,
   theme: 'dark',
-  name: ''
+  name: '',
+  email: '',
+  feedback: ''
 };

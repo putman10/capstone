@@ -8,7 +8,7 @@ import Speech from './Speech';
 function Search(props){
   let input = '';
 
- function handleChange(event) {
+  function handleChange(event) {
     props.dispatch(logInput(event.target.value));
   }
 

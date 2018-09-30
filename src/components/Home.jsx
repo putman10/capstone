@@ -9,10 +9,10 @@ function Home(props){
 
   if(props.search.search){
     console.log(props.search.search);
-      searchTerm = props.search.search
+    searchTerm = props.search.search;
   } else {
-      console.log(props);
-      searchTerm = ''
+    console.log(props);
+    searchTerm = '';
   }
 
   return (

@@ -1,7 +1,7 @@
 import constants from './../constants';
 const { initialState, types } = constants;
 
-const commentVoiceReducer = (state = initialState.name, action) => {
+const commentFeedbackReducer = (state = initialState.feedback, action) => {
   let newSearchText;
   let newSearchStateSlice;
 
@@ -10,10 +10,10 @@ const commentVoiceReducer = (state = initialState.name, action) => {
   default:
     return state;
 
-  case types.SAVE_NAME:
+  case types.SAVE_FEEDBACK:
     return action.translation;
   }
-  
+
 };
 
-export default commentVoiceReducer;
+export default commentFeedbackReducer;

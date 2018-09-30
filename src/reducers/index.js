@@ -1,12 +1,16 @@
 import { combineReducers } from 'redux';
 import voiceSearchReducer from './voiceSearchReducer';
-import commentVoiceReducer from './commentVoiceReducer';
+import commentNameReducer from './commentNameReducer';
+import commentEmailReducer from './commentEmailReducer';
+import commentFeedbackReducer from './commentFeedbackReducer';
 import menuReducer from './menuReducer';
 import themeReducer from './themeReducer';
 
 const rootReducer = combineReducers({
   voiceSearch: voiceSearchReducer,
-  name: commentVoiceReducer,
+  name: commentNameReducer,
+  email: commentEmailReducer,
+  feedback: commentFeedbackReducer,
   menu: menuReducer,
   theme: themeReducer
 });

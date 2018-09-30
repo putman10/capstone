@@ -1,20 +1,36 @@
 import React from 'react';
 import './styles/ContactWidget.css';
 import NameSpeech from './NameSpeech';
+import EmailSpeech from './EmailSpeech';
+import FeedbackSpeech from './FeedbackSpeech';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { updateNameComment } from './../actions';
+import { updateEmailComment } from './../actions';
+import { updateFeedbackComment } from './../actions';
 
 function ContactWidget(props){
   console.log(props);
+  console.log(props.feedback);
   let input = '';
-  function handleChange(event) {
-     props.dispatch(updateNameComment(event.target.value));
-   }
+  let email = '';
+  let feedback = '';
 
-   function submitSearch(event){
-     event.preventDefault();
-   }
+  function handleNameChange(event) {
+    props.dispatch(updateNameComment(event.target.value));
+  }
+
+  function handleEmailChange(event) {
+    props.dispatch(updateEmailComment(event.target.value));
+  }
+
+  function handleFeedbackChange(event) {
+    props.dispatch(updateFeedbackComment(event.target.value));
+  }
+
+  function submitSearch(event){
+    event.preventDefault();
+  }
 
   return (
     <div className="contactWidget">
@@ -25,19 +41,25 @@ function ContactWidget(props){
           <div className="form-group">
             <label>NAME:</label>
             <div className="nameGroup">
-              <input type="text" id="name" value={props.name} onChange={handleChange} ref={node => {input = node;}}/>
+              <input type="text" id="name" value={props.name} onChange={handleNameChange} ref={node => {input = node;}}/>
               <NameSpeech />
             </div>
           </div>
-          <div className="form-group">
+          <div className="form-group extraMargin">
             <label>EMAIL:</label>
-            <input type="text" id="email"/>
+            <div className="emailGroup">
+              <input type="text" id="email" value={props.email} onChange={handleEmailChange} ref={node => {email = node;}}/>
+              <EmailSpeech />
+            </div>
           </div>
         </div>
         <div className="rightForm">
           <div className="form-group">
-            <label>LEAVE A COMMENT:</label>
-            <textarea rows="5" id="comment"></textarea>
+            <label>LEAVE FEEDBACK:</label>
+            <div className="feedbackGroup">
+              <textarea rows="5" id="comment" onChange={handleFeedbackChange} value={props.feedback} ref={node => {feedback = node;}}></textarea>
+              <FeedbackSpeech />
+            </div>
           </div>
         </div>
         <button type="submit">Submit Feedback</button>
@@ -48,13 +70,17 @@ function ContactWidget(props){
 
 ContactWidget.propTypes = {
   dispatch: PropTypes.func,
-  name: PropTypes.string
+  name: PropTypes.string,
+  email: PropTypes.string,
+  feedback: PropTypes.string,
 };
 
 const mapStateToProps = state => {
   console.log(state);
   return {
-    name: state.name
+    name: state.name,
+    email: state.email,
+    feedback: state.feedback
   };
 };
 

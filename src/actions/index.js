@@ -18,6 +18,18 @@ export function updateNameComment(translation){
   };
 }
 
+export function updateEmailComment(translation){
+  return function(dispatch){
+    dispatch(emailComment(translation));
+  };
+}
+
+export function updateFeedbackComment(translation){
+  return function(dispatch){
+    dispatch(feedbackComment(translation));
+  };
+}
+
 export function closeMenu(status){
   return function(dispatch){
     dispatch(menuToggle(status));
@@ -37,6 +49,16 @@ export const voiceSearch = (translation) => ({
 
 export const nameComment = (translation) => ({
   type: types.SAVE_NAME,
+  translation
+});
+
+export const emailComment = (translation) => ({
+  type: types.SAVE_EMAIL,
+  translation
+});
+
+export const feedbackComment = (translation) => ({
+  type: types.SAVE_FEEDBACK,
   translation
 });
 
