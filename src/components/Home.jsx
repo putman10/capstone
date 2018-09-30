@@ -4,14 +4,11 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 function Home(props){
-  console.log(props);
   let searchTerm;
 
   if(props.search.search){
-    console.log(props.search.search);
     searchTerm = props.search.search;
   } else {
-    console.log(props);
     searchTerm = '';
   }
 
@@ -29,7 +26,6 @@ Home.propTypes = {
 };
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     search: state.voiceSearch
   };

@@ -1,5 +1,5 @@
 import constants from './../constants';
-const { initialState, types } = constants;
+const { initialState, c } = constants;
 
 const voiceSearchReducer = (state = initialState.search, action) => {
   let newSearchText;
@@ -10,7 +10,7 @@ const voiceSearchReducer = (state = initialState.search, action) => {
   default:
     return state;
 
-  case types.SAVE_VOICESEARCH:
+  case c.SAVE_VOICESEARCH:
     newSearchText = action.translation;
     newSearchStateSlice = Object.assign({}, state, {
       search: newSearchText

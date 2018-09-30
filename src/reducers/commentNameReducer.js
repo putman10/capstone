@@ -1,16 +1,14 @@
 import constants from './../constants';
-const { initialState, types } = constants;
+const { initialState, c } = constants;
 
 const commentNameReducer = (state = initialState.name, action) => {
-  let newSearchText;
-  let newSearchStateSlice;
 
   switch (action.type) {
 
   default:
     return state;
 
-  case types.SAVE_NAME:
+  case c.SAVE_NAME:
     return action.translation;
   }
 

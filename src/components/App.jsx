@@ -11,11 +11,21 @@ import { Switch, Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import 'babel-polyfill';
 import PropTypes from 'prop-types';
+import { watchFirebaseTicketsRef } from './../actions';
 
 
-function App(){
-  library.add(faMicrophone, faTimesCircle, faFilm, faUserMd, faShoppingCart, faCode, faUniversalAccess);
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log(props);
+  }
 
+  componentWillMount() {
+    library.add(faMicrophone, faTimesCircle, faFilm, faUserMd, faShoppingCart, faCode, faUniversalAccess);
+    this.props.dispatch(watchFirebaseTicketsRef());
+  }
+
+  render(){
   return (
     <div>
       <Header />
@@ -28,10 +38,11 @@ function App(){
     </div>
   );
 }
+}
 
 App.propTypes = {
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
+  dispatch: PropTypes.func
 };
-
 
 export default withRouter(connect()(App));

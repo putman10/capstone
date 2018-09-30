@@ -1,4 +1,37 @@
-import * as types from './../constants/ActionTypes';
+import constants from './../constants';
+const { firebaseConfig, c } = constants;
+import Firebase from 'firebase';
+
+firebase.initializeApp(firebaseConfig);
+const comments = firebase.database().ref('comments');
+
+export function addComment(_name, _email, _feedback) {
+  return () => comments.push({
+    name: _name,
+    email: _email,
+    feedback: _feedback,
+    status: 'unread',
+    timeSent: new Date().getTime()
+  });
+}
+
+export function watchFirebaseTicketsRef() {
+  return function(dispatch) {
+    comments.on('child_added', data => {
+      let newFeedback = Object.assign({}, data.val(), {
+        id: data.getKey(),
+      });
+      dispatch(receiveFeedback(newFeedback));
+    });
+  };
+}
+
+function receiveFeedback(feedbackFromFirebase) {
+  return {
+    type: c.RECEIVE_FEEDBACK,
+    feedback: feedbackFromFirebase
+  };
+}
 
 export function logInput(input) {
   return function(dispatch){
@@ -43,37 +76,37 @@ export function chooseTheme(theme){
 }
 
 export const voiceSearch = (translation) => ({
-  type: types.SAVE_VOICESEARCH,
+  type: c.SAVE_VOICESEARCH,
   translation
 });
 
 export const nameComment = (translation) => ({
-  type: types.SAVE_NAME,
+  type: c.SAVE_NAME,
   translation
 });
 
 export const emailComment = (translation) => ({
-  type: types.SAVE_EMAIL,
+  type: c.SAVE_EMAIL,
   translation
 });
 
 export const feedbackComment = (translation) => ({
-  type: types.SAVE_FEEDBACK,
+  type: c.SAVE_FEEDBACK,
   translation
 });
 
 export const requestLatLong = (zip, localSearchId) => ({
-  type: types.REQUEST_LATLONG,
+  type: c.REQUEST_LATLONG,
   zip,
   searchId: localSearchId
 });
 
 export const menuToggle = (status) => ({
-  type: types.CLOSE_MENU,
+  type: c.CLOSE_MENU,
   status
 });
 
 export const themeToggle = (theme) => ({
-  type: types.CHOOSE_THEME,
+  type: c.CHOOSE_THEME,
   theme
 });

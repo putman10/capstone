@@ -7,11 +7,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { updateNameComment } from './../actions';
 import { updateEmailComment } from './../actions';
+import { addComment } from './../actions';
 import { updateFeedbackComment } from './../actions';
 
 function ContactWidget(props){
-  console.log(props);
-  console.log(props.feedback);
   let input = '';
   let email = '';
   let feedback = '';
@@ -30,6 +29,10 @@ function ContactWidget(props){
 
   function submitSearch(event){
     event.preventDefault();
+    props.dispatch(addComment(props.name, props.email, props.feedback))
+    props.dispatch(updateNameComment(''));
+    props.dispatch(updateEmailComment(''));
+    props.dispatch(updateFeedbackComment(''));
   }
 
   return (
@@ -76,7 +79,6 @@ ContactWidget.propTypes = {
 };
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     name: state.name,
     email: state.email,
