@@ -19,6 +19,10 @@
     color:white;
 }
 
+.emailButtonOff:hover {
+    color: #ff3d00;
+}
+
 .emailButtonOn {
     padding: 10px;
     border: 1px solid white;

@@ -53,6 +53,11 @@ p {
     -webkit-transition: color .4s ease-in-out;
 }
 
+.menuItem .active{
+color: #FFB405;
+border-bottom: 2px solid #FFB405;
+}
+
 .menuItem:hover a{
 color: #FFB405;
 }

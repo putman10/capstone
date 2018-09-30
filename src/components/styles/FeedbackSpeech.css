@@ -19,6 +19,10 @@
     color:white;
 }
 
+.feedbackButtonOff:hover {
+    color: #ff3d00;
+}
+
 .feedbackButtonOn {
     padding: 10px;
     border: 1px solid white;

@@ -18,7 +18,7 @@ class Menu extends React.Component {
 
   handleCloseNavMenu(toggle){
     this.props.dispatch(closeMenu(toggle));
-    ReactTooltip.hide();
+    ReactTooltip.hide()
   }
 
   render(){

@@ -37,7 +37,7 @@ class EmailSpeech extends React.Component {
 
     return (
       <div className="emailButtons">
-        <div data-tip="Hold mouse down and speak voice2text" className={this.props.listening ? 'nameButtonOn' : 'nameButtonOff'} onMouseDown={this.handleReset} onMouseUp={this.handleStop} >
+        <div data-tip="Hold mouse down and speak voice2text" className={this.props.listening ? 'emailButtonOn' : 'emailButtonOff'} onMouseDown={this.handleReset} onMouseUp={this.handleStop} >
           <ReactTooltip />
           <FontAwesomeIcon icon="microphone" alt="microphone. Click and start speaking"/>
         </div>

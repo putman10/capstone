@@ -19,6 +19,10 @@
     color:white;
 }
 
+.voiceButtonOff:hover {
+    color: #ff3d00;
+}
+
 .voiceButtonOn {
     padding: 10px;
     border: 1px solid black;
