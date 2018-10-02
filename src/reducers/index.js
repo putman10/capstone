@@ -6,7 +6,6 @@ import commentFeedbackReducer from './commentFeedbackReducer';
 import menuReducer from './menuReducer';
 import themeReducer from './themeReducer';
 import feedbackReducer from './feedbackReducer';
-import selectedCommentReducer from './selectedCommentReducer';
 
 const rootReducer = combineReducers({
   voiceSearch: voiceSearchReducer,
@@ -15,8 +14,7 @@ const rootReducer = combineReducers({
   feedback: commentFeedbackReducer,
   menu: menuReducer,
   theme: themeReducer,
-  comments: feedbackReducer,
-  selectedComment: selectedCommentReducer
+  comments: feedbackReducer
 });
 
 export default rootReducer;

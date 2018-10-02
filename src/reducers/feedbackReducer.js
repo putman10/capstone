@@ -1,8 +1,9 @@
 import constants from './../constants';
 const { initialState, c } = constants;
 
-const feedbackReducer = (state = initialState.feedback, action) => {
+const feedbackReducer = (state = initialState.comments, action) => {
   let newState = null;
+  let index = null;
 
   switch (action.type) {
 
@@ -16,9 +17,13 @@ const feedbackReducer = (state = initialState.feedback, action) => {
 
   case c.UPDATE_LOCALCOMMENTSSTATUS:
     newState = Object.assign({}, state);
-    newState[action.id].status = "Read";
+    newState[action.id].status = 'Read';
     return newState;
 
+  case c.DELETE_SELECTEDCOMMENT:
+  newState = Object.assign({}, state);
+  delete newState[action.id];
+    return newState;
   }
 
 

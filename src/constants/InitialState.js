@@ -1,10 +1,9 @@
 export const initialState = {
   search: {},
-  comment: {},
+  comments: {},
   menu: true,
   theme: 'dark',
   name: '',
   email: '',
-  feedback: '',
-  selectedComment: {}
+  feedback: ''
 };

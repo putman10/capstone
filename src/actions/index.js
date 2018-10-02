@@ -27,15 +27,20 @@ export function watchFirebaseTicketsRef() {
 }
 
 export function markAsRead(comment) {
-  const id = comment.id;
-  const selectedComment = firebase.database().ref('comments/' + id);
+  const selectedComment = firebase.database().ref('comments/' + comment.id);
   return function(dispatch) {
     selectedComment.update({
     status: 'Read',
   });
-  dispatch(markLocalAsRead(id));
-  dispatch(selectComment(comment));
+  dispatch(markLocalAsRead(comment.id));
+  }
+}
 
+export function deleteComment(comment) {
+  const selectedComment = firebase.database().ref('comments/' + comment.id);
+  return function(dispatch) {
+    selectedComment.remove();
+  dispatch(deleteSelectedComment(comment.id));
   }
 }
 
@@ -129,7 +134,7 @@ export const markLocalAsRead = (id) => ({
   id
 });
 
-export const selectComment = (comment) => ({
-  type: c.SET_SELECTEDCOMMENT,
-  comment
+export const deleteSelectedComment = (id) => ({
+  type: c.DELETE_SELECTEDCOMMENT,
+  id
 });
