@@ -19,7 +19,7 @@ class FooterLinks extends React.Component {
           <p><Link to="/">Home</Link></p>
         </div>
         <div className="footerLinksItem">
-          <p><Link to="/admin"><FontAwesomeIcon icon="shopping-cart" alt="Business Icon"/> Businesses</Link></p>
+          <p><FontAwesomeIcon icon="shopping-cart" alt="Business Icon"/> Businesses</p>
         </div>
         <div className="footerLinksItem">
           <p><FontAwesomeIcon icon="film" alt="Movie Icon"/> Theaters</p>
@@ -31,7 +31,7 @@ class FooterLinks extends React.Component {
           <p><FontAwesomeIcon icon="code" alt="Developer Icon"/> For Developers</p>
         </div>
         <div className="footerLinksItem">
-          <p>Contact</p>
+          <p><Link to="/admin"><FontAwesomeIcon icon="unlock" alt="Admin Icon"/> Admin</Link></p>
         </div>
       </div>
     );

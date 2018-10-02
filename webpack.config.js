@@ -85,6 +85,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
     API_KEY: JSON.stringify(myEnv.parsed.API_KEY),
+    YELP_KEY: JSON.stringify(myEnv.parsed.YELP_KEY)
     }),
   ]
 };

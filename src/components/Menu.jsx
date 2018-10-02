@@ -47,9 +47,6 @@ class Menu extends React.Component {
           <div className="menuItem">
             <p><FontAwesomeIcon icon="code" alt="Developer Icon"/> For Developers</p>
           </div>
-          <div className="menuItem">
-            <p>Contact</p>
-          </div>
         </div>
       </div>;
 

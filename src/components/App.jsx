@@ -7,7 +7,7 @@ import Home from './Home';
 import Error404 from './Error404';
 import Admin from './Admin';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMicrophone, faTimesCircle, faFilm, faUserMd, faShoppingCart, faCode, faUniversalAccess } from '@fortawesome/free-solid-svg-icons';
+import { faUnlock, faMicrophone, faTimesCircle, faFilm, faUserMd, faShoppingCart, faCode, faUniversalAccess } from '@fortawesome/free-solid-svg-icons';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import 'babel-polyfill';
@@ -21,7 +21,7 @@ class App extends React.Component {
   }
 
   componentWillMount() {
-    library.add(faMicrophone, faTimesCircle, faFilm, faUserMd, faShoppingCart, faCode, faUniversalAccess);
+    library.add(faUnlock, faMicrophone, faTimesCircle, faFilm, faUserMd, faShoppingCart, faCode, faUniversalAccess);
     this.props.dispatch(watchFirebaseTicketsRef());
   }
 

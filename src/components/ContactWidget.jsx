@@ -38,20 +38,20 @@ function ContactWidget(props){
   return (
     <div className="contactWidget">
       <h2>HAVE A SUGGESTION?</h2>
-      <p>We would love to hear from you. Enter a site suggestion in the form below. We are continuosly improving the accessibility and adaptive to provide content you as a user want.</p>
+      <p>We would love to hear from you. Enter a site suggestion in the form below. We are continually improving the accessibility and adapt the site to provide content you as the user wants.</p>
       <form onSubmit={submitSearch}>
         <div className="leftForm">
           <div className="form-group">
             <label>NAME:</label>
             <div className="nameGroup">
-              <input type="text" id="name" value={props.name} onChange={handleNameChange} ref={node => {input = node;}}/>
+              <input type="text" id="name" placeholder="Type or say your name..." value={props.name} onChange={handleNameChange} ref={node => {input = node;}}/>
               <NameSpeech />
             </div>
           </div>
           <div className="form-group extraMargin">
             <label>EMAIL:</label>
             <div className="emailGroup">
-              <input type="text" id="email" value={props.email} onChange={handleEmailChange} ref={node => {email = node;}}/>
+              <input type="text" id="email" placeholder="Type or say your email..." value={props.email} onChange={handleEmailChange} ref={node => {email = node;}}/>
               <EmailSpeech />
             </div>
           </div>
@@ -60,7 +60,7 @@ function ContactWidget(props){
           <div className="form-group">
             <label>LEAVE FEEDBACK:</label>
             <div className="feedbackGroup">
-              <textarea rows="5" id="comment" onChange={handleFeedbackChange} value={props.feedback} ref={node => {feedback = node;}}></textarea>
+              <textarea rows="5" id="comment" placeholder="Type or say your message..." onChange={handleFeedbackChange} value={props.feedback} ref={node => {feedback = node;}}></textarea>
               <FeedbackSpeech />
             </div>
           </div>

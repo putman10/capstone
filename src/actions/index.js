@@ -1,6 +1,7 @@
 import constants from './../constants';
 const { firebaseConfig, c } = constants;
 import Firebase from 'firebase';
+import v4 from 'uuid/v4';
 
 firebase.initializeApp(firebaseConfig);
 const comments = firebase.database().ref('comments');
@@ -43,6 +44,37 @@ export function deleteComment(comment) {
   dispatch(deleteSelectedComment(comment.id));
   }
 }
+
+export function fetchYelpResults(searchQuery) {
+  return function(dispatch){
+    const localSearchId = v4();
+    console.log(YELP_KEY);
+    dispatch(requestYelpResults(searchQuery, localSearchId));
+    return fetch('https://api.yelp.com/v3/businesses/search?term=delis&latitude=37.786882&longitude=-122.399972',
+    {
+     method: 'fetch',
+     headers: new Headers({
+       'Authorization': 'Bearer ' + YELP_KEY
+     })}).then(
+      response => response.json(),
+      error => console.log('An error occurred.', error)
+    ).then(function(json) {
+      if (json.results.length > 0) {
+        console.log(json);
+        // receiveYelpResults( dispatch);
+      } else {
+        console.log('Please enter a valid Zip Code');
+      }
+    });
+  };
+}
+
+export const requestYelpResults = (searchQuery, localSearchId) => ({
+  type: c.REQUEST_YELPRESULTS,
+  searchQuery,
+  searchId: localSearchId
+});
+
 
 function receiveFeedback(feedbackFromFirebase) {
   return {

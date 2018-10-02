@@ -2,7 +2,7 @@ import React from 'react';
 import './styles/Search.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { logInput } from './../actions';
+import { logInput, fetchYelpResults } from './../actions';
 import Speech from './Speech';
 
 function Search(props){
@@ -14,14 +14,15 @@ function Search(props){
 
   function submitSearch(event){
     event.preventDefault();
+    props.dispatch(fetchYelpResults(event.target.value));
   }
 
   return (
     <div id="searchInputDiv">
       <form onSubmit={submitSearch}>
-        <input className="searchInput" value={props.voiceSearch.search} onChange={handleChange} ref={node => {input = node;}}></input>
+        <input className="searchInput" placeholder="Type or hold microphone button to speak..." value={props.voiceSearch.search} onChange={handleChange} ref={node => {input = node;}}></input>
         <Speech />
-        <button className="searchButton">Search</button>
+        <button className="searchButton" >Search</button>
       </form>
     </div>
   );
