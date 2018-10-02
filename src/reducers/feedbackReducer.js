@@ -13,7 +13,15 @@ const feedbackReducer = (state = initialState.feedback, action) => {
     newState = Object.assign({}, state);
     newState[action.feedback.id] = action.feedback;
     return newState;
+
+  case c.UPDATE_LOCALCOMMENTSSTATUS:
+    newState = Object.assign({}, state);
+    newState[action.id].status = "Read";
+    return newState;
+
   }
+
+
 
 };
 

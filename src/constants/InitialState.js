@@ -5,5 +5,6 @@ export const initialState = {
   theme: 'dark',
   name: '',
   email: '',
-  feedback: ''
+  feedback: '',
+  selectedComment: {}
 };

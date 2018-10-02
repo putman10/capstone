@@ -6,4 +6,65 @@
 
 .commentList {
 font-size: 16px;
+text-align: left;
+}
+
+.inbox1{
+  width:10%;
+  display:inline-block;
+  vertical-align: top;
+}
+
+.inbox2{
+  width:20%;
+  display:inline-block;
+  vertical-align: top;
+}
+
+.inbox3{
+  width:30%;
+  display:inline-block;
+  vertical-align: top;
+}
+
+.inbox4{
+  width:40%;
+  display:inline-block;
+  vertical-align: top;
+}
+
+.inbox5{
+  width:50%;
+  display:inline-block;
+  vertical-align: top;
+}
+
+.inbox6{
+  width:60%;
+  display:inline-block;
+  vertical-align: top;
+}
+
+.inboxRow {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-bottom: 0;
+}
+
+.header {
+  background: #6520ff;
+  color: white;
+  font-weight: 700;
+}
+
+.read {
+  background: white;
+}
+
+.unread {
+  background: #eaeaea;
+}
+
+.inboxRow:last-of-type {
+    border-bottom: 1px solid #cccccc;
 }

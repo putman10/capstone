@@ -10,7 +10,7 @@ export function addComment(_name, _email, _feedback) {
     name: _name,
     email: _email,
     feedback: _feedback,
-    status: 'unread',
+    status: 'Unread',
     timeSent: new Date().getTime()
   });
 }
@@ -24,6 +24,19 @@ export function watchFirebaseTicketsRef() {
       dispatch(receiveFeedback(newFeedback));
     });
   };
+}
+
+export function markAsRead(comment) {
+  const id = comment.id;
+  const selectedComment = firebase.database().ref('comments/' + id);
+  return function(dispatch) {
+    selectedComment.update({
+    status: 'Read',
+  });
+  dispatch(markLocalAsRead(id));
+  dispatch(selectComment(comment));
+
+  }
 }
 
 function receiveFeedback(feedbackFromFirebase) {
@@ -109,4 +122,14 @@ export const menuToggle = (status) => ({
 export const themeToggle = (theme) => ({
   type: c.CHOOSE_THEME,
   theme
+});
+
+export const markLocalAsRead = (id) => ({
+  type: c.UPDATE_LOCALCOMMENTSSTATUS,
+  id
+});
+
+export const selectComment = (comment) => ({
+  type: c.SET_SELECTEDCOMMENT,
+  comment
 });

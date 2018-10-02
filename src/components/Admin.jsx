@@ -5,12 +5,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 function Admin(props){
-    console.log(props);
-
 
   return (
     <div className="admin container">
-      <p>Admin</p>
+      <h1>ADMIN</h1>
       <CommentList />
     </div>
   );

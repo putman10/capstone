@@ -2,6 +2,7 @@ import React from 'react';
 import './styles/App.css';
 import Header from './Header';
 import Footer from './Footer';
+import Comment from './Comment';
 import Home from './Home';
 import Error404 from './Error404';
 import Admin from './Admin';
@@ -17,7 +18,6 @@ import { watchFirebaseTicketsRef } from './../actions';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
   }
 
   componentWillMount() {
@@ -32,6 +32,7 @@ class App extends React.Component {
       <Switch>
         <Route exact path='/' render={(props)=><Home currentRouterPath={props.location.pathname}/>} />
         <Route path='/admin' render={()=><Admin />} />
+        <Route path='/comments/:commentId' render={()=><Comment />} />
         <Route component={Error404} />
       </Switch>
       <Footer />
