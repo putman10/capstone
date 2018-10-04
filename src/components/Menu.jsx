@@ -39,7 +39,7 @@ class Menu extends React.Component {
             <p><Link to="/admin"><FontAwesomeIcon icon="shopping-cart" alt="Business Icon"/> Businesses</Link></p>
           </div>
           <div className="menuItem">
-            <p><FontAwesomeIcon icon="film" alt="Movie Icon"/> Theaters</p>
+            <p><Link to="/theater"><FontAwesomeIcon icon="film" alt="Movie Icon"/> Theaters</Link></p>
           </div>
           <div className="menuItem">
             <p><FontAwesomeIcon icon="user-md" alt="Doctor Icon"/> Doctors</p>

@@ -1,6 +1,6 @@
 
 .theaterList {
-    padding: 29px;
+    padding: 10px;
 }
 
 .theaterBox {
@@ -32,4 +32,12 @@ img {
 
 .theaterBoxText {
     margin: 0 8px 8px 8px;
+}
+
+.theaterBoxPhone {
+    margin-top: 15px;
+}
+
+.purpleText {
+  color: #651fff;
 }

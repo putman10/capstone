@@ -5,18 +5,10 @@ import PropTypes from 'prop-types';
 import TheaterList from './TheaterList';
 
 function Home(props){
-  let searchTerm;
-
-  if(props.search.search){
-    searchTerm = props.search.search;
-  } else {
-    searchTerm = '';
-  }
 
   return (
     <div className="home container">
       <h1>HOME</h1>
-      {searchTerm}
       <TheaterList />
     </div>
   );

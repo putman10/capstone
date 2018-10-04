@@ -4,6 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Comment from './Comment';
 import Theater from './Theater';
+import TheaterList from './TheaterList';
 import Home from './Home';
 import Error404 from './Error404';
 import Admin from './Admin';
@@ -36,6 +37,7 @@ class App extends React.Component {
           <Route exact path='/' render={(props)=><Home currentRouterPath={props.location.pathname}/>} />
           <Route path='/admin' render={()=><Admin />} />
           <Route path='/comments/:commentId' render={()=><Comment />} />
+          <Route exact path='/theater' render={()=><TheaterList />} />
           <Route path='/theater/:theaterId' render={()=><Theater />} />
           <Route component={Error404} />
         </Switch>

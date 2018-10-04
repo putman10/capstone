@@ -10,13 +10,23 @@ import Image from 'react-graceful-image';
 
 function TheaterList(props){
   console.log(props);
+  console.log(props.location.pathname);
 
   function viewTheater(theater) {
     props.history.push('/theater/' + theater.id);
   }
 
+  let searchTerm;
+
+  if(props.search.search){
+    searchTerm = props.search.search;
+  } else {
+    searchTerm = '';
+  }
+
   return (
     <div className="theaterList">
+    <h2>Accessible Theaters within 60 miles of <span className="purpleText">{searchTerm}</span></h2>
       {Object.keys(props.theaters).map(function(theaterId) {
         var theater = props.theaters[theaterId];
         return <div key={theaterId} className="theaterBox" onClick={() =>viewTheater(theater)}>
@@ -25,7 +35,7 @@ function TheaterList(props){
             <h3>{theater.name}</h3>
             <p>{theater.address}</p>
             <p>{theater.city}, {theater.state} {theater.zip}</p>
-            <p><b>{theater.phone}</b></p>
+            <p className="theaterBoxPhone"><b>{theater.phone}</b></p>
           </div>
         </div>;
       })}
@@ -37,12 +47,15 @@ TheaterList.propTypes = {
   dispatch: PropTypes.func,
   theaters: PropTypes.object,
   theaterId: PropTypes.string,
-  history: PropTypes.object
+  history: PropTypes.object,
+  search: PropTypes.object
 };
 
 const mapStateToProps = state => {
+console.log(state);
   return {
-    theaters: state.theaters
+    theaters: state.theaters,
+    search: state.voiceSearch
   };
 };
 
