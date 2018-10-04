@@ -30,7 +30,7 @@ function TheaterList(props){
       {Object.keys(props.theaters).map(function(theaterId) {
         var theater = props.theaters[theaterId];
         return <div key={theaterId} className="theaterBox" onClick={() =>viewTheater(theater)}>
-          <p><Image width="270" height="190" src={theater.image} alt="image of popcorn and movie ticket"/></p>
+          <p><Image width="277" height="195" src={theater.image} alt="image of popcorn and movie ticket"/></p>
           <div className="theaterBoxText">
             <h3>{theater.name}</h3>
             <p>{theater.address}</p>

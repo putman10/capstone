@@ -6,7 +6,7 @@
 .theaterBox {
     width: 23.5%;
     margin-bottom: 2rem;
-    min-height: 345px;
+    min-height: 350px;
     border: 0px solid black;
     margin-right: 1.5%;
     background-color: white;
@@ -16,6 +16,23 @@
     -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.36);
     -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.36);
     box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.36);
+    transition: transform .5s ease-in-out;
+    -moz-transition: transform .5s ease-in-out;
+    -webkit-transition: transform .5s ease-in-out;
+}
+
+.theaterBox:hover {
+  transform: scale(1.03);
+}
+
+.theaterBox h3{
+  transition: color .5s ease-in-out;
+  -moz-transition: color .5s ease-in-out;
+  -webkit-transition: color .5s ease-in-out;
+}
+
+.theaterBox:hover h3{
+  color:#651fff;
 }
 
 .theaterBox img {
