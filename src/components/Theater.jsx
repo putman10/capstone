@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom';
 import Moment from 'react-moment';
 import { Link } from 'react-router-dom';
 import Image from 'react-graceful-image';
+import SimpleMap from './SimpleMap';
 
 
 class Theater extends React.Component {
@@ -30,6 +31,7 @@ class Theater extends React.Component {
             <p>{selectedTheater.city}, {selectedTheater.state} {selectedTheater.zip}</p>
             <p><b>{selectedTheater.phone}</b></p>
           </div>
+          <SimpleMap />
         </div>
       );
     } else {

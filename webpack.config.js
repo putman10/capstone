@@ -84,7 +84,8 @@ module.exports = {
       filename: resolve(__dirname, "build", "index.html"),
     }),
     new webpack.DefinePlugin({
-    TRIMET_KEY: JSON.stringify(myEnv.parsed.TRIMET_KEY)
+    TRIMET_KEY: JSON.stringify(myEnv.parsed.TRIMET_KEY),
+    GOOGLE_KEY: JSON.stringify(myEnv.parsed.GOOGLE_KEY)
     }),
   ]
 };
