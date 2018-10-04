@@ -17,7 +17,26 @@ export function addComment(_name, _email, _feedback) {
   });
 }
 
-export function addTheater(_name, _image, _phone, _address, _city, _state, _zip) {
+export function fetchTheaterLocation(_name, _image, _phone, _address, _city, _state, _zip) {
+  return function(dispatch){
+    return fetch('https://maps.googleapis.com/maps/api/geocode/json?address=' + _address + "&" + _zip + '&key=' + GOOGLE_KEY).then(
+      response => response.json(),
+      error => console.log('An error occurred.', error)
+    ).then(function(json) {
+      if (json.results.length > 0) {
+        const lat = json.results[0].geometry.location.lat;
+        const lng = json.results[0].geometry.location.lng;
+              console.log(json.results[0].geometry.location.lng);
+        addTheater(_name, _image, _phone, _address, _city, _state, _zip,  lat, lng);
+      } else {
+        console.log('Please enter a valid Zip Code');
+      }
+    });
+  };
+}
+
+export function addTheater(_name, _image, _phone, _address, _city, _state, _zip, lat, lng) {
+  console.log(_zip)
   return () => theaters.push({
     name: _name,
     image: _image,
@@ -26,6 +45,8 @@ export function addTheater(_name, _image, _phone, _address, _city, _state, _zip)
     city: _city,
     state: _state,
     zip: _zip,
+    lat: lat,
+    lng: lng,
     dateAdded: new Date().getTime()
   });
 }

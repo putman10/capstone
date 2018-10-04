@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/Comment.css';
+import './styles/Theater.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { markAsRead } from './../actions';
@@ -21,17 +21,19 @@ class Theater extends React.Component {
 
     if(selectedTheater) {
       return (
-        <div className="container comment">
+        <div className="container theater">
           <p><Link to="/">Back to All Theaters</Link></p>
           <br />
+          <div className="theaterDetailBoxText">
           <p><Image width="257" height="172" src={selectedTheater.image} alt="image of popcorn and movie ticket"/></p>
-          <div className="theaterBoxText">
             <h3>{selectedTheater.name}</h3>
             <p>{selectedTheater.address}</p>
             <p>{selectedTheater.city}, {selectedTheater.state} {selectedTheater.zip}</p>
             <p><b>{selectedTheater.phone}</b></p>
           </div>
-          <SimpleMap />
+          <div className="map">
+            <SimpleMap />
+          </div>
         </div>
       );
     } else {

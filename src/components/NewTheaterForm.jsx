@@ -2,7 +2,7 @@ import React from 'react';
 import './styles/NewTheaterForm.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addTheater } from './../actions';
+import { fetchTheaterLocation } from './../actions';
 
 function NewTheaterForm(props){
   let _name = null;
@@ -15,7 +15,7 @@ function NewTheaterForm(props){
 
   function addNewTheater(event){
     event.preventDefault();
-    props.dispatch(addTheater(_name.value, _image.value, _phone.value, _address.value, _city.value, _state.value, _zip.value));
+    props.dispatch(fetchTheaterLocation(_name.value, _image.value, _phone.value, _address.value, _city.value, _state.value, _zip.value));
     _name.value = '';
     _image.value = '';
     _phone.value = '';

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+import './styles/SimpleMap.css';
 
 class SimpleMap extends Component {
 
@@ -13,10 +12,15 @@ class SimpleMap extends Component {
       },
       zoom: 11
     };
+    var image =< img src='https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png' alt="mapIcon" />;
+
+    const AnyReactComponent = ({ text }) => <div className="popup">{ text }{image} </div>;
+
+
 
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: '100vh', width: '100%' }}>
+      <div style={{ height: '300px', width: '100%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: GOOGLE_KEY }}
           defaultCenter={defaultProps.center}
@@ -25,7 +29,7 @@ class SimpleMap extends Component {
           <AnyReactComponent
             lat={59.955413}
             lng={30.337844}
-            text={'Kreyser Avrora'}
+            text={'Kreyser Avrora RAR'}
           />
         </GoogleMapReact>
       </div>

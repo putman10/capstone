@@ -1,0 +1,18 @@
+
+.map {
+  width:65%;
+  margin-left: 4%;
+  display:inline-block;
+  vertical-align: top;
+}
+
+.theaterDetailBoxText {
+  width:30%;
+  display:inline-block;
+  vertical-align: top;
+}
+
+.theater {
+  background: white;
+  padding: 6rem 3rem;
+}
