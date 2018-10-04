@@ -13,9 +13,9 @@
     display: inline-block;
     vertical-align: top;
     border-radius: 6px;
-    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.36);
-    -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.36);
-    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.36);
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.53);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.53);
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.53);
     transition: transform .5s ease-in-out;
     -moz-transition: transform .5s ease-in-out;
     -webkit-transition: transform .5s ease-in-out;
