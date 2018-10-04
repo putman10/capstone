@@ -32,7 +32,7 @@ class Theater extends React.Component {
             <p><b>{selectedTheater.phone}</b></p>
           </div>
           <div className="map">
-            <SimpleMap />
+            <SimpleMap selectedTheater ={selectedTheater}/>
           </div>
         </div>
       );

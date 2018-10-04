@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import './styles/SimpleMap.css';
+import PropTypes from 'prop-types';
 
 class SimpleMap extends Component {
+  constructor(props) {
+    super(props);
+console.log(props.selectedTheater.lat);
+  }
 
   render() {
+    console.log(this.props.selectedTheater.lat);
     let defaultProps = {
       center: {
-        lat: 59.95,
-        lng: 30.33
+        lat: this.props.selectedTheater.lat,
+        lng: this.props.selectedTheater.lng
       },
       zoom: 11
     };
     var image =< img src='https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png' alt="mapIcon" />;
 
-    const AnyReactComponent = ({ text }) => <div className="popup">{ text }{image} </div>;
+    const AnyReactComponent = ({ text }) => <div className="popup">{image} </div>;
 
 
 
@@ -27,8 +33,8 @@ class SimpleMap extends Component {
           defaultZoom={defaultProps.zoom}
         >
           <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
+            lat={this.props.selectedTheater.lat}
+            lng={this.props.selectedTheater.lng}
             text={'Kreyser Avrora RAR'}
           />
         </GoogleMapReact>
@@ -36,5 +42,9 @@ class SimpleMap extends Component {
     );
   }
 }
+
+SimpleMap.propTypes = {
+  selectedTheater: PropTypes.object
+};
 
 export default SimpleMap;

@@ -27,7 +27,7 @@ export function fetchTheaterLocation(_name, _image, _phone, _address, _city, _st
         const lat = json.results[0].geometry.location.lat;
         const lng = json.results[0].geometry.location.lng;
               console.log(json.results[0].geometry.location.lng);
-        addTheater(_name, _image, _phone, _address, _city, _state, _zip,  lat, lng);
+        dispatch(addTheater(_name, _image, _phone, _address, _city, _state, _zip,  lat, lng, dispatch));
       } else {
         console.log('Please enter a valid Zip Code');
       }
@@ -35,8 +35,8 @@ export function fetchTheaterLocation(_name, _image, _phone, _address, _city, _st
   };
 }
 
-export function addTheater(_name, _image, _phone, _address, _city, _state, _zip, lat, lng) {
-  console.log(_zip)
+export function addTheater(_name, _image, _phone, _address, _city, _state, _zip, lat, lng, dispatch) {
+  console.log(theaters);
   return () => theaters.push({
     name: _name,
     image: _image,
@@ -49,6 +49,7 @@ export function addTheater(_name, _image, _phone, _address, _city, _state, _zip,
     lng: lng,
     dateAdded: new Date().getTime()
   });
+  console.log(lng);
 }
 
 export function watchFirebaseTicketsRef() {
