@@ -11,16 +11,16 @@ import { deleteComment } from './../actions';
 
 class Comment extends React.Component {
   constructor(props) {
-		super(props)
-	}
+    super(props);
+  }
 
   deleteComment(selectedComment) {
     const { dispatch, history } = this.props;
-    dispatch(deleteComment(selectedComment))
+    dispatch(deleteComment(selectedComment));
     history.push('/admin');
   }
 
-	render() {
+  render() {
     let selectedComment = this.props.comments[this.props.match.params.commentId];
 
     if(selectedComment) {
@@ -33,9 +33,9 @@ class Comment extends React.Component {
           <p className="feedbackArea">{selectedComment.feedback}</p>
           <button className="commentDetailButton" onClick={() =>this.deleteComment(selectedComment)}>DELETE</button>
         </div>
-      )
+      );
     } else {
-      return null
+      return null;
     }
   }
 }

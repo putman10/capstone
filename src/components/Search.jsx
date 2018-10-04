@@ -2,7 +2,7 @@ import React from 'react';
 import './styles/Search.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { logInput, fetchYelpResults } from './../actions';
+import { logInput, fetchTrimetResults } from './../actions';
 import Speech from './Speech';
 
 function Search(props){
@@ -14,7 +14,7 @@ function Search(props){
 
   function submitSearch(event){
     event.preventDefault();
-    props.dispatch(fetchYelpResults(event.target.value));
+    props.dispatch(fetchTrimetResults(event.target.value));
   }
 
   return (

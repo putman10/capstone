@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/Admin.css';
 import CommentList from './CommentList';
+import NewTheaterForm from './NewTheaterForm';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
@@ -10,6 +11,8 @@ function Admin(props){
     <div className="admin container">
       <h1>ADMIN</h1>
       <CommentList />
+      <br/>
+      <NewTheaterForm />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import './styles/Home.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import TheaterList from './TheaterList';
 
 function Home(props){
   let searchTerm;
@@ -14,8 +15,9 @@ function Home(props){
 
   return (
     <div className="home container">
-      <p>Home</p>
+      <h1>HOME</h1>
       {searchTerm}
+      <TheaterList />
     </div>
   );
 }

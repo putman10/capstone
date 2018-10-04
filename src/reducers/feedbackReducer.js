@@ -21,8 +21,8 @@ const feedbackReducer = (state = initialState.comments, action) => {
     return newState;
 
   case c.DELETE_SELECTEDCOMMENT:
-  newState = Object.assign({}, state);
-  delete newState[action.id];
+    newState = Object.assign({}, state);
+    delete newState[action.id];
     return newState;
   }
 

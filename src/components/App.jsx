@@ -3,6 +3,7 @@ import './styles/App.css';
 import Header from './Header';
 import Footer from './Footer';
 import Comment from './Comment';
+import Theater from './Theater';
 import Home from './Home';
 import Error404 from './Error404';
 import Admin from './Admin';
@@ -12,7 +13,7 @@ import { Switch, Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import 'babel-polyfill';
 import PropTypes from 'prop-types';
-import { watchFirebaseTicketsRef } from './../actions';
+import { watchFirebaseTicketsRef, watchFirebaseTheatersRef } from './../actions';
 
 
 class App extends React.Component {
@@ -23,22 +24,25 @@ class App extends React.Component {
   componentWillMount() {
     library.add(faUnlock, faMicrophone, faTimesCircle, faFilm, faUserMd, faShoppingCart, faCode, faUniversalAccess);
     this.props.dispatch(watchFirebaseTicketsRef());
+    this.props.dispatch(watchFirebaseTheatersRef());
+    console.log(this.props);
   }
 
   render(){
-  return (
-    <div>
-      <Header />
-      <Switch>
-        <Route exact path='/' render={(props)=><Home currentRouterPath={props.location.pathname}/>} />
-        <Route path='/admin' render={()=><Admin />} />
-        <Route path='/comments/:commentId' render={()=><Comment />} />
-        <Route component={Error404} />
-      </Switch>
-      <Footer />
-    </div>
-  );
-}
+    return (
+      <div>
+        <Header />
+        <Switch>
+          <Route exact path='/' render={(props)=><Home currentRouterPath={props.location.pathname}/>} />
+          <Route path='/admin' render={()=><Admin />} />
+          <Route path='/comments/:commentId' render={()=><Comment />} />
+          <Route path='/theater/:theaterId' render={()=><Theater />} />
+          <Route component={Error404} />
+        </Switch>
+        <Footer />
+      </div>
+    );
+  }
 }
 
 App.propTypes = {

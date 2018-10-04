@@ -7,7 +7,7 @@
     color: black;
     border-radius: 0px 4px 4px 0;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 21px;
     border-left: 0;
     transition: color .5s ease-in-out, background .5s ease-in-out;
     -moz-transition: color .5s ease-in-out, background .5s ease-in-out;
@@ -31,7 +31,7 @@
     background: #ff3d00;
     color: white;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 21px;
     border-left: 0;
     border-radius: 0 4px 4px 0;
 }

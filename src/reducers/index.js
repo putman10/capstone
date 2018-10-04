@@ -6,6 +6,7 @@ import commentFeedbackReducer from './commentFeedbackReducer';
 import menuReducer from './menuReducer';
 import themeReducer from './themeReducer';
 import feedbackReducer from './feedbackReducer';
+import theaterReducer from './theaterReducer';
 
 const rootReducer = combineReducers({
   voiceSearch: voiceSearchReducer,
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
   feedback: commentFeedbackReducer,
   menu: menuReducer,
   theme: themeReducer,
-  comments: feedbackReducer
+  comments: feedbackReducer,
+  theaters: theaterReducer
 });
 
 export default rootReducer;

@@ -1,0 +1,54 @@
+import React from 'react';
+import './styles/Comment.css';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { markAsRead } from './../actions';
+import { withRouter } from 'react-router-dom';
+import Moment from 'react-moment';
+import { Link } from 'react-router-dom';
+import Image from 'react-graceful-image';
+
+
+class Theater extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+
+  render() {
+    let selectedTheater = this.props.theaters[this.props.match.params.theaterId];
+
+    if(selectedTheater) {
+      return (
+        <div className="container comment">
+          <p><Link to="/">Back to All Theaters</Link></p>
+          <br />
+          <p><Image width="257" height="172" src={selectedTheater.image} alt="image of popcorn and movie ticket"/></p>
+          <div className="theaterBoxText">
+            <h3>{selectedTheater.name}</h3>
+            <p>{selectedTheater.address}</p>
+            <p>{selectedTheater.city}, {selectedTheater.state} {selectedTheater.zip}</p>
+            <p><b>{selectedTheater.phone}</b></p>
+          </div>
+        </div>
+      );
+    } else {
+      return null;
+    }
+  }
+}
+
+Comment.propTypes = {
+  dispatch: PropTypes.func,
+  selectedTheater: PropTypes.object,
+  theaters: PropTypes.object
+};
+
+const mapStateToProps = state => {
+  return {
+    selectedTheater: state.selectedComment,
+    theaters: state.theaters
+  };
+};
+
+export default withRouter(connect(mapStateToProps)(Theater));

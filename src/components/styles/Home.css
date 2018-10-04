@@ -1,9 +1,10 @@
 .home {
     background-color: white;
-    padding: 6rem 10px;
+    padding: 4rem 10px;
     border: 1px solid #FFB405;
-    text-align: center;
+  }
+
+.home h1{
+    font-size: 50px;
     font-weight: 700;
-    z-index: -4;
-    position: relative;
 }

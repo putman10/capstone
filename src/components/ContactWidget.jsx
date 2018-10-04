@@ -29,7 +29,7 @@ function ContactWidget(props){
 
   function submitSearch(event){
     event.preventDefault();
-    props.dispatch(addComment(props.name, props.email, props.feedback))
+    props.dispatch(addComment(props.name, props.email, props.feedback));
     props.dispatch(updateNameComment(''));
     props.dispatch(updateEmailComment(''));
     props.dispatch(updateFeedbackComment(''));
@@ -42,14 +42,14 @@ function ContactWidget(props){
       <form onSubmit={submitSearch}>
         <div className="leftForm">
           <div className="form-group">
-            <label>NAME:</label>
+            <label htmlFor="name">NAME:</label>
             <div className="nameGroup">
               <input type="text" id="name" placeholder="Type or say your name..." value={props.name} onChange={handleNameChange} ref={node => {input = node;}}/>
               <NameSpeech />
             </div>
           </div>
           <div className="form-group extraMargin">
-            <label>EMAIL:</label>
+            <label htmlFor="email">EMAIL:</label>
             <div className="emailGroup">
               <input type="text" id="email" placeholder="Type or say your email..." value={props.email} onChange={handleEmailChange} ref={node => {email = node;}}/>
               <EmailSpeech />
@@ -58,7 +58,7 @@ function ContactWidget(props){
         </div>
         <div className="rightForm">
           <div className="form-group">
-            <label>LEAVE FEEDBACK:</label>
+            <label htmlFor="comment">LEAVE FEEDBACK:</label>
             <div className="feedbackGroup">
               <textarea rows="5" id="comment" placeholder="Type or say your message..." onChange={handleFeedbackChange} value={props.feedback} ref={node => {feedback = node;}}></textarea>
               <FeedbackSpeech />

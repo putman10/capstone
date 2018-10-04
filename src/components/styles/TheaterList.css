@@ -1,0 +1,35 @@
+
+.theaterList {
+    padding: 29px;
+}
+
+.theaterBox {
+    width: 23.5%;
+    margin-bottom: 2rem;
+    min-height: 345px;
+    border: 0px solid black;
+    margin-right: 1.5%;
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.36);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.36);
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.36);
+}
+
+.theaterBox img {
+    border-radius: 6px 6px 0 0;
+}
+
+.theaterBox:last-of-type {
+    margin-right: 0%;
+}
+
+img {
+  max-width:100%;
+}
+
+.theaterBoxText {
+    margin: 0 8px 8px 8px;
+}

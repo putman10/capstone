@@ -1,27 +1,29 @@
-.contactWidget h2{
+.newTheaterForm h2{
   margin-top: 0;
 }
+.newTheaterForm {
+    margin-top: 3rem;
+}
 
-.contactWidget input {
-    width: 84%;
+.newTheaterForm input {
+    width: 100%;
     display: inline-block;
-    border: 1px solid white;
-    border-right: 0px;
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 4px;
     padding: 10px;
     background: white;
     color: black;
     font-size: 18px;
+    border: 1px solid black;
 }
 
-.contactWidget textarea {
+.newTheaterForm textarea {
     width: 84%;
     display: inline-block;
     border: 1px solid white;
     border-radius: 4px 0px 4px 4px;
     padding: 10px;
-    background: white;
-    color: black;
+    background: #252525;
+    color: white;
     font-size: 18px;
 }
 
@@ -30,7 +32,7 @@
   position:relative;
 }
 
-.contactWidget button {
+.newTheaterForm button {
     background: #FFB405;
     border: 1px solid black;
     border-radius: 3px;
@@ -44,13 +46,13 @@
     -moz-transition: background .5s ease-in-out, color .5s ease-in-out, border .5s ease-in-out;
     -webkit-transition: background .5s ease-in-out, color .5s ease-in-out, border .5s ease-in-out;
 }
-.contactWidget button:hover {
+.newTheaterForm button:hover {
     background: black;
     color: white;
     border: 1px solid white;
 }
 
-.contactWidget label {
+.newTheaterForm label {
     font-weight: 700;
 }
 
@@ -62,11 +64,7 @@
   margin-right: 3%;
 }
 
-.contactWidget p {
+.newTheaterForm p {
   margin-bottom:10px;
   max-width: 97%;
-}
-
-.nameGroup {
-  margin-top: 7px;
 }
