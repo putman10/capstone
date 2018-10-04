@@ -47,3 +47,8 @@ color: white;
     vertical-align: top;
     border-right: 0;
 }
+
+
+.searchInputLabel{
+  display:none;
+}

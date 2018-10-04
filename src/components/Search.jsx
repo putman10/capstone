@@ -20,7 +20,8 @@ function Search(props){
   return (
     <div id="searchInputDiv">
       <form onSubmit={submitSearch}>
-        <input className="searchInput" placeholder="Type or hold microphone button to speak..." value={props.voiceSearch.search} onChange={handleChange} ref={node => {input = node;}}></input>
+      <label htmlFor="searchInput" className="searchInputLabel">Search Input</label>
+        <input className="searchInput" id="searchInput" placeholder="Type or hold microphone button to speak..." value={props.voiceSearch.search} onChange={handleChange} ref={node => {input = node;}}></input>
         <Speech />
         <button className="searchButton" >Search</button>
       </form>

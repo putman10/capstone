@@ -29,7 +29,7 @@ class Theater extends React.Component {
             <h3>{selectedTheater.name}</h3>
             <p>{selectedTheater.address}</p>
             <p>{selectedTheater.city}, {selectedTheater.state} {selectedTheater.zip}</p>
-            <p><b>{selectedTheater.phone}</b></p>
+            <p className="theaterBoxPhone"><b>{selectedTheater.phone}</b></p>
           </div>
           <div className="map">
             <SimpleMap selectedTheater ={selectedTheater}/>
