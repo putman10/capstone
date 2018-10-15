@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 class SimpleMap extends Component {
   constructor(props) {
     super(props);
-console.log(props.selectedTheater.lat);
   }
 
   render() {
